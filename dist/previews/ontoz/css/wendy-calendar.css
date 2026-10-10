@@ -1,0 +1,112 @@
+/* OntoZ: Button 73:3681; Input 3671:34; Dialog 3801:318; Badge 665:2024.
+   Calendar business layout follows shared tokens; account tools are inline filters. */
+#wendyApp .wcal.wd-content-calendar { min-width:0; overflow:hidden; padding:0; border:1px solid var(--oz-border); border-radius:12px; background:var(--oz-card); color:var(--oz-foreground); }
+#wendyHome .wcal.wd-home-calendar { border:0; border-radius:0 0 16px 16px; }
+#wendyApp .wcal * { box-sizing:border-box; }
+#wendyApp .wcal svg,#wendyApp .wcal-dialog svg { width:16px;height:16px;flex:none; }
+#wendyApp .wcal-toolbar { display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:16px 16px 12px; }
+#wendyApp .wcal-date-nav { display:flex;align-items:center;flex-wrap:wrap;gap:6px;min-width:0; }
+#wendyApp .wcal-toolbar h3 { margin:0 0 0 4px;font-size:var(--oz-text-sm);line-height:var(--oz-leading-sm);font-weight:var(--oz-weight-semibold);font-variant-numeric:tabular-nums; }
+#wendyApp .wcal :is(.wcal-toolbar,.wcal-footer) button,#wendyApp .wcal-dialog button { display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:32px;height:32px;padding:6px 10px;border:1px solid var(--oz-border);border-radius:10px;background:var(--oz-card);color:var(--oz-foreground);font:var(--oz-weight-medium) var(--oz-text-sm)/var(--oz-leading-sm) var(--oz-font-family-sans);cursor:pointer; }
+#wendyApp .wcal-date-nav > button:is(:first-child,:nth-child(3)) { width:32px;padding:8px; }
+#wendyApp .wcal-views { display:flex;gap:2px;padding:3px;border:1px solid var(--oz-border);border-radius:12px;background:var(--oz-secondary); }
+#wendyApp .wcal-views button { min-width:36px;border-color:transparent;background:transparent; }
+#wendyApp .wcal-views button[aria-pressed=true] { background:var(--oz-card);color:var(--oz-indigo-600);box-shadow:var(--oz-shadow-xs); }
+#wendyApp .wcal-date-picker { position:relative;display:grid;place-items:center;width:28px;height:32px;overflow:hidden;cursor:pointer;color:var(--oz-muted-foreground); }
+#wendyApp .wcal-date-picker input { position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer; }
+#wendyApp .wcal-date-picker input::-webkit-calendar-picker-indicator { position:absolute;inset:0;width:100%;height:100%;cursor:pointer; }
+#wendyApp .wcal-filters { display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:0 16px 12px; }
+#wendyApp .wcal-filters > label { display:flex;align-items:center;gap:6px;min-width:0; }
+#wendyApp .wcal select,#wendyApp .wcal-dialog input { min-width:0;max-width:100%;height:36px;padding:4px 10px;border:1px solid var(--oz-border);border-radius:8px;background:var(--oz-card);color:var(--oz-foreground);font:var(--oz-weight-normal) var(--oz-text-sm)/var(--oz-leading-sm) var(--oz-font-family-sans); }
+#wendyApp .wcal-filters select[data-cal-input=account] { width:170px; }
+#wendyApp .wcal-total,#wendyApp .wcal-zone { display:flex;align-items:center;gap:4px;font-size:var(--oz-text-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal-zone { margin-left:auto; }
+#wendyApp .wcal-scroll { position:relative;max-height:570px;overflow:auto;overscroll-behavior:contain;border-top:1px solid var(--oz-border);border-bottom:1px solid var(--oz-border);scrollbar-width:thin;scrollbar-color:var(--oz-border) transparent; }
+#wendyApp .wcal-time-grid { min-width:740px;--wcal-cols:repeat(7,minmax(0,1fr)); }
+#wendyApp .wcal-time-grid.is-day { min-width:0;--wcal-cols:minmax(0,1fr); }
+#wendyApp .wcal-time-head,#wendyApp .wcal-time-row { display:grid;grid-template-columns:44px var(--wcal-cols); }
+#wendyApp .wcal-time-head { position:sticky;top:0;z-index:3;background:var(--oz-card);box-shadow:0 1px 0 var(--oz-border); }
+#wendyApp .wcal-time-head > button { display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;height:50px;padding:8px 4px;border:0;border-left:1px solid var(--oz-border);border-radius:0;background:var(--oz-card);font-size:var(--oz-text-xs);color:var(--oz-muted-foreground);cursor:pointer; }
+#wendyApp .wcal-time-head b { display:grid;place-items:center;min-width:28px;height:28px;border-radius:50%;font-size:var(--oz-text-sm);color:var(--oz-foreground); }
+#wendyApp .wcal-time-head .is-today b { background:var(--oz-indigo-500);color:white; }
+#wendyApp .wcal-time-corner { display:grid;place-items:center;font-size:var(--oz-text-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal-time-body { position:relative; }
+#wendyApp .wcal-time-row { min-height:48px; }
+#wendyApp .wcal-time-row > time { position:sticky;left:0;z-index:2;padding:5px 3px;text-align:center;background:var(--oz-card);font-size:var(--oz-text-xs);color:var(--oz-muted-foreground);font-variant-numeric:tabular-nums; }
+#wendyApp .wcal-slot { min-width:0;min-height:48px;border-left:1px solid var(--oz-border);border-bottom:1px solid var(--oz-border);padding:3px; }
+#wendyApp .wcal-time-row:nth-child(odd) .wcal-slot { border-bottom-style:dashed; }
+#wendyApp .wcal-slot.is-today { background:color-mix(in srgb,var(--oz-indigo-50) 35%,var(--oz-card)); }
+#wendyApp .wcal-post { position:relative;min-width:0;margin:0 0 3px;border:1px solid var(--oz-indigo-200);border-left:3px solid var(--oz-indigo-500);border-radius:8px;background:var(--oz-indigo-50);overflow:hidden; }
+#wendyApp .wcal-post:last-child { margin-bottom:0; }
+#wendyApp .wcal-post[draggable=true] { cursor:grab; }
+#wendyApp .wcal-post.is-pending { background:var(--oz-amber-50);border-color:var(--oz-amber-200);border-left-color:var(--oz-amber-500); }
+#wendyApp .wcal-post.is-published { background:var(--oz-secondary);border-color:var(--oz-border);border-left-color:var(--oz-green-500); }
+#wendyApp .wcal .wcal-post-main { display:flex;flex-direction:column;gap:5px;align-items:stretch;width:100%;min-width:0;min-height:0;padding:7px 6px;border:0;border-radius:0;background:none;text-align:left;color:var(--oz-foreground);cursor:inherit; }
+#wendyApp .wcal-post-meta { display:flex;align-items:center;gap:4px;min-width:0;font-size:var(--oz-text-xs);line-height:16px; }
+#wendyApp .wcal-post-meta img { width:14px;height:14px;flex:none; }
+#wendyApp .wcal-post-meta i { width:5px;height:5px;flex:none;background:var(--oz-indigo-500);border-radius:50%; }
+#wendyApp .is-pending .wcal-post-meta i { background:var(--oz-amber-500); }
+#wendyApp .is-published .wcal-post-meta i { background:var(--oz-green-500); }
+#wendyApp .wcal-post-main > b { display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;font-size:var(--oz-text-xs);line-height:var(--oz-leading-xs);font-weight:var(--oz-weight-medium);white-space:normal; }
+#wendyApp .wcal-post-main > small { display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--oz-text-xs);line-height:var(--oz-leading-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal .wcal-drag-handle { position:absolute;right:0;top:2px;display:flex;align-items:center;justify-content:center;width:20px;height:22px;min-height:0;padding:2px;border:0;border-radius:4px;background:inherit;color:var(--oz-muted-foreground);cursor:grab;touch-action:none; }
+#wendyApp .wcal-drag-handle svg { width:12px;height:12px; }
+#wendyApp .wcal .wcal-drop-active { background:var(--oz-indigo-100);box-shadow:inset 0 0 0 2px var(--oz-indigo-500); }
+#wendyApp .wcal .is-dragging { opacity:.45; }
+#wendyApp .wcal-month { min-width:740px; }
+#wendyApp .wcal-weekdays { display:grid;grid-template-columns:repeat(7,minmax(0,1fr));position:sticky;top:0;z-index:3;background:var(--oz-card);border-bottom:1px solid var(--oz-border); }
+#wendyApp .wcal-weekdays span { padding:12px 4px;text-align:center;font-size:var(--oz-text-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal-month-grid { display:grid;grid-template-columns:repeat(7,minmax(0,1fr)); }
+#wendyApp .wcal-month-day { min-width:0;min-height:132px;padding:6px;border-right:1px solid var(--oz-border);border-bottom:1px solid var(--oz-border); }
+#wendyApp .wcal-month-day:nth-child(7n) { border-right:0; }
+#wendyApp .wcal-month-day.outside { background:var(--oz-secondary); }
+#wendyApp .wcal .wcal-day-number { display:flex;align-items:center;gap:5px;min-height:26px;margin-bottom:6px;padding:2px 6px;border:0;border-radius:8px;background:none;color:var(--oz-foreground);font-size:var(--oz-text-xs);cursor:pointer; }
+#wendyApp .wcal .wcal-day-number span { font-size:var(--oz-text-xs); }
+#wendyApp .wcal .is-today > .wcal-day-number { background:var(--oz-indigo-500);color:white; }
+#wendyApp .wcal-empty { padding:12px 16px;color:var(--oz-muted-foreground);background:var(--oz-secondary);font-size:var(--oz-text-sm); }
+#wendyApp .wcal-footer { display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:12px 16px; }
+#wendyApp .wcal-legend { display:flex;gap:10px; }
+#wendyApp .wcal-legend span { display:flex;align-items:center;gap:4px;font-size:var(--oz-text-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal-legend i { width:6px;height:6px;border-radius:50%;background:var(--oz-indigo-500); }
+#wendyApp .wcal-legend .pending { background:var(--oz-amber-500); }
+#wendyApp .wcal-legend .published { background:var(--oz-green-500); }
+#wendyApp .wcal-footer small { margin-left:auto;font-size:var(--oz-text-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal-dialog { width:min(520px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:24px;margin:auto;border:1px solid var(--oz-border);border-radius:10px;background:var(--oz-card);color:var(--oz-foreground);box-shadow:var(--oz-shadow-lg); }
+#wendyApp .wcal-dialog::backdrop { background:rgb(0 0 0 / .4); }
+#wendyApp .wcal-dialog header,#wendyApp .wcal-dialog footer { display:flex;align-items:center;justify-content:space-between;gap:8px; }
+#wendyApp .wcal-dialog h2 { margin:0;font-size:var(--oz-text-lg);line-height:var(--oz-leading-lg); }
+#wendyApp .wcal-dialog h3 { font-size:var(--oz-text-base);line-height:var(--oz-leading-base); }
+#wendyApp .wcal-dialog-account { display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:var(--oz-text-sm); }
+#wendyApp .wcal-dialog-account small { color:var(--oz-muted-foreground); }
+#wendyApp .wcal-preview { width:100%;max-height:190px;object-fit:contain;border-radius:8px;background:var(--oz-secondary); }
+#wendyApp .wcal-copy { max-height:140px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:var(--oz-text-sm);line-height:var(--oz-leading-sm); }
+#wendyApp .wcal-fields { display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px; }
+#wendyApp .wcal-fields label { display:grid;gap:8px;font-size:var(--oz-text-sm); }
+#wendyApp .wcal-fields input { width:100%; }
+#wendyApp .wcal-dialog-hint { font-size:var(--oz-text-xs);color:var(--oz-muted-foreground); }
+#wendyApp .wcal-dialog footer { justify-content:flex-end;margin-top:20px; }
+#wendyApp .wcal-dialog .wcal-primary { background:var(--oz-indigo-500);color:var(--oz-primary-foreground);border-color:var(--oz-indigo-500); }
+#wendyApp .wcal-error { color:var(--oz-destructive);font-size:var(--oz-text-xs); }
+#wendyApp .wcal :is(button,select,input):focus-visible,#wendyApp .wcal-scroll:focus-visible,#wendyApp .wcal-dialog :is(button,input):focus-visible { outline:0;box-shadow:var(--oz-shadow-focus); }
+#wendyApp .wcal button:hover,#wendyApp .wcal-dialog button:hover { filter:brightness(.97); }
+@media(max-width:767px) {
+ #wendyApp .wcal-toolbar { padding:12px;gap:10px; }
+ #wendyApp .wcal-date-nav { flex:1; }
+ #wendyApp .wcal-date-nav h3 { order:4;flex-basis:100%;margin:4px 0 0; }
+ #wendyApp .wcal-filters { padding:0 12px 12px; }
+ #wendyApp .wcal-filters select[data-cal-input=account] { width:152px; }
+ #wendyApp .wcal-filters > label > svg { display:none; }
+ #wendyApp .wcal-zone { margin-left:0; }
+ #wendyApp .wcal-scroll { max-height:520px; }
+ #wendyApp .wcal .wcal-drag-handle { width:24px;height:28px; }
+ #wendyApp .wcal-dialog { padding:20px; }
+ #wendyApp .wcal-dialog input { font-size:var(--oz-text-base); }
+ #wendyApp .wcal-footer { padding:12px; }
+ #wendyApp .wcal-footer small { margin-left:0; }
+}
+
+#wendyApp .wcal[data-cal-view=month] .wcal-scroll { max-height:none; }
+#wendyApp .wcal-month-day { min-height:112px; }
+#wendyApp .wcal-month .wcal-post-main { gap:3px; }
+#wendyApp .wcal-month .wcal-post-main > b { -webkit-line-clamp:1; }
+#wendyApp .wcal .wcal-more { display:block;width:100%;padding:3px 4px;min-height:24px;border:0;border-radius:4px;background:transparent;color:var(--oz-indigo-600);text-align:left;font-size:var(--oz-text-xs);cursor:pointer; }

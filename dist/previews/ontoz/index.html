@@ -1,0 +1,1686 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; form-action 'none';">
+<script src="preview-setup.js?v=c76a575d4b"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OntoZ 专业建站 Lucas——为外贸企业生成可转化的专业独立站。" />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>OntoZ · 专业建站 Lucas</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="lucide-icons.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/inquiry-messaging.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/agent-shared.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/wendy-home.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/wendy-studio.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/wendy-calendar.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/zoe-agent-v2.css?v=c76a575d4b" id="zoeAgentV2Styles" disabled />
+    <link rel="stylesheet" href="css/wendy-inbox.css?v=c76a575d4b" />
+    <link rel="stylesheet" href="css/project-layout.css?v=c76a575d4b" />
+  <link rel="stylesheet" href="preview-only.css?v=c76a575d4b"></head>
+  <body>
+    <a class="skip-link" href="#mainContent">跳到主要内容</a>
+    <noscript>
+      <p class="noscript-notice">此演示需要启用 JavaScript 才能使用页面导航和交互功能。</p>
+    </noscript>
+
+    <header class="mobile-app-bar" aria-label="移动端应用栏">
+      <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="打开主导航" aria-controls="sidebar" aria-expanded="false">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+      <a class="mobile-brand" href="#lucas" aria-label="OntoZ 首页">OntoZ</a>
+      <span class="mobile-page-title" id="mobilePageTitle">专业建站 Lucas</span>
+    </header>
+    <button class="mobile-nav-scrim" id="mobileNavScrim" type="button" aria-label="关闭主导航" hidden></button>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="主导航">
+        <header class="sidebar-header">
+          <a class="brand" href="#lucas" aria-label="OntoZ 首页">OntoZ</a>
+          <button class="collapse-button" id="collapseButton" type="button" aria-label="收起导航" aria-controls="sidebarNavigation" aria-expanded="true">
+            <i data-lucide="panel-left-close" aria-hidden="true"></i>
+          </button>
+        </header>
+
+        <nav class="sidebar-nav" id="sidebarNavigation">
+          <section class="nav-section" aria-labelledby="workspace-label">
+            <h2 id="workspace-label">工作台</h2>
+            <a class="nav-item" href="#ontology"><i data-lucide="brain-circuit"></i><span>企业本体</span></a>
+            <a class="nav-item" href="#dashboard"><i data-lucide="chart-column-big"></i><span>数据看板</span></a>
+            <a class="nav-item" href="#customers"><i data-lucide="contact-round"></i><span>客户池</span></a>
+            <a class="nav-item" href="#lily/messages"><i data-lucide="inbox"></i><span>询盘消息</span></a>
+          </section>
+          <section class="nav-section" aria-labelledby="agents-label">
+            <h2 id="agents-label">智能体</h2>
+            <a class="nav-item" href="#zoe"><i data-lucide="user-round-search"></i><span>搜索开发 Zoe</span></a>
+            <a class="nav-item" href="#lily"><i data-lucide="handshake"></i><span>触达转化 Lily</span></a>
+            <a class="nav-item" href="#leo"><i data-lucide="briefcase-business"></i><span>展会助手 Leo</span></a>
+            <a class="nav-item active" href="#lucas" aria-current="page"><i data-lucide="monitor"></i><span>专业建站 Lucas</span></a>
+            <a class="nav-item" href="#john"><i data-lucide="chart-no-axes-combined"></i><span>24/7投流 John</span></a>
+            <a class="nav-item" href="#wendy"><i data-lucide="messages-square"></i><span>社媒运营 Wendy</span></a>
+          </section>
+        </nav>
+
+        <button class="account" type="button" aria-label="打开 John Smith 的账户菜单">
+          <img src="assets/avatar.png" alt="" />
+          <strong>John Smith</strong>
+          <i data-lucide="chevrons-up-down" aria-hidden="true"></i>
+        </button>
+      </aside>
+
+      <main class="app-workspace" id="mainContent" tabindex="-1">
+        <div class="lily-home lily-v23" id="lilyHome">
+          <div class="agent-v2" id="lilyOverview" data-agent="Lily">
+          <header class="lily-v23-header av2-header" aria-labelledby="page-title">
+            <div>
+              <h1 class="lily-home-title" id="page-title">让高质量线索转化为真实询盘</h1>
+              <p class="lily-home-subtitle">理解客户、制定策略、生成内容并持续执行，让每一次触达更有针对性。</p>
+              <div class="av2-actions av2-page-actions"><button class="av2-primary" type="button" data-av2-compose><i data-lucide="wand-sparkles"></i>生成触达策略</button><button class="av2-secondary" type="button" data-lily-page="lily/tasks"><i data-lucide="list-todo"></i>任务管理</button></div>
+            </div>
+            <div class="lily-console-card">
+              <span class="lily-console-icon"><i data-lucide="gauge"></i></span>
+              <span><strong>Lily正在自主工作</strong><small>3个任务正在自主执行</small></span>
+              <button data-lily-page="lily/templates" type="button"><i data-lucide="library"></i>触达策略库</button>
+            </div>
+          </header>
+
+          <div class="lily-v23-body av2-columns">
+            <div class="lily-v23-main av2-main">
+              <section class="lily-metrics" aria-label="策略与执行摘要">
+                <div class="lily-strategy-totals">
+                  <h2>已生成策略</h2>
+                  <p><strong id="lilyTodayStrategies">+12</strong><span>今日</span></p>
+                  <p><b id="lilyTotalStrategies">168</b><span>累计</span></p>
+                </div>
+                <div class="lily-reach-totals">
+                  <p><strong>13</strong><span>已触达企业</span></p>
+                  <p><strong>17</strong><span>已触达联系人</span></p>
+                </div>
+              </section>
+
+              <section class="lily-runtime" aria-label="Agent 运行视图">
+                <div class="lily-flow lily-live-canvas stage-execute is-normal" id="lilyLiveFlow" aria-label="Lily 实时工作流图谱">
+                  <div class="lily-live-grid" aria-hidden="true"></div>
+                  <svg class="lily-live-svg" id="lilyLiveSvg" viewBox="0 0 960 680" preserveAspectRatio="none" role="img" aria-label="客户池、实时商业信号和企业本体持续汇入 Lily，并转化为策略、内容与触达动作">
+                    <defs>
+                      <linearGradient id="lilyLiveGradient" x1="0" x2="1"><stop offset="0" stop-color="#2fbea0"></stop><stop offset=".52" stop-color="#318fda"></stop><stop offset="1" stop-color="#5472df"></stop></linearGradient>
+                    </defs>
+                    <path id="lily-path-pool" class="lily-live-path" d="M178 211 C310 215 350 330 480 381"></path>
+                    <path class="lily-live-path-guide" d="M130 381 C250 381 360 381 480 381"></path>
+                    <path id="lily-path-signal" class="lily-live-path is-horizontal" d="M130 381 C250 381 360 381 480 381"></path>
+                    <path id="lily-path-ontology" class="lily-live-path" d="M178 544 C310 535 350 430 480 381"></path>
+                    <path id="lily-path-strategy" class="lily-live-path" d="M480 381 C610 330 650 215 782 211"></path>
+                    <path class="lily-live-path-guide" d="M480 381 C600 381 710 381 830 381"></path>
+                    <path id="lily-path-content" class="lily-live-path is-horizontal" d="M480 381 C600 381 710 381 830 381"></path>
+                    <path id="lily-path-execute" class="lily-live-path" d="M480 381 C610 430 650 535 782 544"></path>
+
+                    <g class="lily-transfer-payload tone-blue" data-payload-index="0"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">Lumina GmbH</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="0s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-pool"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-green" data-payload-index="1"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">Nordic Light</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="5.33s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="5.33s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-pool"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-violet" data-payload-index="2"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">重点角色 28位</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="10.66s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="10.66s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-pool"></mpath></animateMotion></g>
+
+                    <g class="lily-transfer-payload tone-green" data-payload-index="0"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">欧洲采购季</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="0s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-signal"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-cyan" data-payload-index="1"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">展会窗口</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="5.33s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="5.33s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-signal"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-amber" data-payload-index="2"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">新品发布</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="10.66s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="10.66s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-signal"></mpath></animateMotion></g>
+
+                    <g class="lily-transfer-payload tone-violet" data-payload-index="0"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">工艺问询破冰</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="0s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-ontology"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-green" data-payload-index="1"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">7天快速打样</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="5.33s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="5.33s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-ontology"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-amber" data-payload-index="2"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">低 MOQ</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="10.66s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="10.66s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-ontology"></mpath></animateMotion></g>
+
+                    <g class="lily-transfer-payload tone-blue" data-payload-index="0"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">冷启动策略</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="0s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-strategy"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-violet" data-payload-index="1"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">新品季匹配</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="5.33s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="5.33s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-strategy"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-cyan" data-payload-index="2"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">已读客户激活</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="10.66s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="10.66s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-strategy"></mpath></animateMotion></g>
+
+                    <g class="lily-transfer-payload tone-violet" data-payload-index="0"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">采购工艺问询</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="0s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-content"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-blue" data-payload-index="1"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">English</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="5.33s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="5.33s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-content"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-green" data-payload-index="2"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">案例递进跟进</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="10.66s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="10.66s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-content"></mpath></animateMotion></g>
+
+                    <g class="lily-transfer-payload tone-blue" data-payload-index="0"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">Anna Müller</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="0s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-execute"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-green" data-payload-index="1"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">Sophie Laurent</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="5.33s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="5.33s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-execute"></mpath></animateMotion></g>
+                    <g class="lily-transfer-payload tone-amber" data-payload-index="2"><rect x="-62" y="-15" width="124" height="30" rx="15"></rect><text x="0" y="4" text-anchor="middle">邮件第 2 轮</text><animate class="lily-payload-opacity" attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.025;.375;.4;1" dur="16s" begin="10.66s" repeatCount="indefinite"></animate><animateMotion class="lily-payload-motion" dur="16s" begin="10.66s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.4;1" calcMode="linear"><mpath href="#lily-path-execute"></mpath></animateMotion></g>
+
+                    <g class="lily-gathering"><path id="lily-gather-0" d="M34 60 C210 90 340 220 468 326"></path><circle class="tone-blue" r="3.2"><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin="0s" repeatCount="indefinite"></animate><animateMotion dur="3.1s" begin="0s" repeatCount="indefinite"><mpath href="#lily-gather-0"></mpath></animateMotion></circle></g>
+                    <g class="lily-gathering"><path id="lily-gather-1" d="M34 620 C210 590 340 460 468 354"></path><circle class="tone-green" r="3.2"><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin=".24s" repeatCount="indefinite"></animate><animateMotion dur="3.1s" begin=".24s" repeatCount="indefinite"><mpath href="#lily-gather-1"></mpath></animateMotion></circle></g>
+                    <g class="lily-gathering"><path id="lily-gather-2" d="M926 60 C750 90 620 220 492 326"></path><circle class="tone-violet" r="3.2"><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin=".48s" repeatCount="indefinite"></animate><animateMotion dur="3.1s" begin=".48s" repeatCount="indefinite"><mpath href="#lily-gather-2"></mpath></animateMotion></circle></g>
+                    <g class="lily-gathering"><path id="lily-gather-3" d="M926 620 C750 590 620 460 492 354"></path><circle class="tone-cyan" r="3.2"><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin=".72s" repeatCount="indefinite"></animate><animateMotion dur="3.1s" begin=".72s" repeatCount="indefinite"><mpath href="#lily-gather-3"></mpath></animateMotion></circle></g>
+                    <g class="lily-gathering"><path id="lily-gather-4" d="M60 340 C240 340 350 340 468 340"></path><circle class="tone-amber" r="3.2"><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin=".96s" repeatCount="indefinite"></animate><animateMotion dur="3.1s" begin=".96s" repeatCount="indefinite"><mpath href="#lily-gather-4"></mpath></animateMotion></circle></g>
+                    <g class="lily-gathering"><path id="lily-gather-5" d="M900 340 C720 340 610 340 492 340"></path><circle class="tone-blue" r="3.2"><animate attributeName="opacity" values="0;1;0" dur="3.1s" begin="1.2s" repeatCount="indefinite"></animate><animateMotion dur="3.1s" begin="1.2s" repeatCount="indefinite"><mpath href="#lily-gather-5"></mpath></animateMotion></circle></g>
+                  </svg>
+
+                  <button class="lily-live-node live-pool" type="button" data-flow-node="客户池" data-flow-route="pool"><span><i data-lucide="database"></i></span><strong>客户池</strong><small>企业 · 联系人 · 触达状态</small></button>
+                  <button class="lily-live-node live-signal" type="button" data-flow-node="实时商业信号" data-flow-route="signal"><span><i data-lucide="activity"></i></span><strong>实时商业信号</strong><small>趋势 · 时机 · 展会</small></button>
+                  <button class="lily-live-node live-ontology" type="button" data-flow-node="企业本体" data-flow-route="ontology"><span><i data-lucide="brain-circuit"></i></span><strong>企业本体</strong><small>策略经验 · 产品卖点</small></button>
+                  <div class="lily-live-core"><span class="lily-core-pulse"></span><span class="lily-live-orbit"></span><i data-lucide="bot"></i><strong>LILY</strong><small>策略触达专家</small></div>
+                  <button class="lily-live-node live-strategy" type="button" data-flow-node="制定营销策略" data-flow-route="strategy"><span><i data-lucide="layers-3"></i></span><strong>01 制定营销策略</strong><small>客户精细分层</small></button>
+                  <button class="lily-live-node live-content" type="button" data-flow-node="生成沟通内容" data-flow-route="content"><span><i data-lucide="wand-sparkles"></i></span><strong>02 生成沟通内容</strong><small>千人千面定制</small></button>
+                  <button class="lily-live-node live-execute" type="button" data-flow-node="自主执行触达" data-flow-route="execute"><span><i data-lucide="send"></i></span><strong>03 自主执行触达</strong><small>多渠道持续跟进</small></button>
+
+                  <div class="lily-live-status" id="lilyRuntimeStatus" role="status" aria-live="polite">
+                    <span><i data-lucide="radio"></i><b data-lily-flow-mode>Lily 实时工作</b></span>
+                    <strong>Lily 正在自主执行触达任务</strong>
+                    <small>欧洲装饰照明制造商 · 第 2 轮 · 今日已送达 31 位联系人</small>
+                  </div>
+                </div>
+              </section>
+              <div class="lily-execution-summary">
+                <h2>最近动态</h2>
+                <button data-lily-page="lily/tasks" type="button">欧洲装饰照明制造商｜定制玻璃工艺首轮触达</button>
+                <ul>
+                  <li>09-02 10:42，向 Lumina GmbH 的 Anna Müller 发送邮件</li>
+                  <li>09-02 10:31，向 Nordic Light A/S 的 Mark Jensen 发送 WhatsApp 消息</li>
+                  <li>09-02 10:18，向 Atelier Lume 的 Sophie Laurent 发送邮件</li>
+                </ul>
+                <p>已送达 23 封邮件 · 8 条 WhatsApp 消息</p>
+              </div>
+            </div>
+
+            <aside class="lily-copilot av2-collab" id="lilyCollaboration" aria-labelledby="strategy-title">
+              <section class="strategy-panel" aria-labelledby="strategy-title">
+                <header class="strategy-header">
+                  <div class="av2-collab-title"><h2 id="strategy-title">与 Lily 协作</h2><button class="av2-close" data-av2-close type="button" aria-label="关闭 Lily 协作区"><i data-lucide="x"></i></button></div>
+                  <div class="lily-strategy-tabs" role="tablist" aria-label="策略状态">
+                    <button id="lilyPendingTab" type="button" role="tab" data-strategy-status="pending" aria-selected="true" aria-controls="strategyGrid">待你确认<span data-strategy-count="pending"></span></button>
+                    <button id="lilyAppliedTab" type="button" role="tab" data-strategy-status="applied" aria-selected="false" aria-controls="strategyGrid" tabindex="-1">已处理<span data-strategy-count="applied"></span></button>
+                  </div>
+                </header>
+                <div class="strategy-grid av2-stream" id="strategyGrid" role="tabpanel" aria-labelledby="lilyPendingTab" tabindex="0" aria-live="polite"></div>
+              </section>
+              <section class="lily-composer-shell" aria-label="让 Lily 生成触达策略">
+                <img class="lily-composer-mascot" src="assets/lily-composer-mascot.png" alt="" />
+                <p class="lily-composer-quota">每日限免 1 次</p>
+                <div class="composer lily-strategy-composer av2-prompt-box">
+                  <label class="av2-input-label" for="opportunityInput">描述你的触达方向</label>
+                  <textarea id="opportunityInput" rows="2" maxlength="500" aria-label="描述你的触达方向" placeholder="例如：重点触达英国舞台灯光制造商"></textarea>
+                  <div class="composer-actions">
+                    <span id="lilyPromptHint" role="status"></span>
+                    <button class="send-button" id="sendButton" type="button">生成策略<i data-lucide="send"></i></button>
+                  </div>
+                </div>
+              </section>
+            </aside>
+          </div>
+          </div>
+
+          <section class="my-strategy-panel" id="myStrategyPanel" aria-labelledby="my-strategy-title" hidden>
+            <header class="my-strategy-header"><h2 id="my-strategy-title">重点客户</h2><button class="scene-tab" id="showRecommendTab" type="button">返回推荐策略</button></header>
+            <div class="my-strategy-list" id="myStrategyList"></div>
+          </section>
+          <button class="scene-tab" id="showMyStrategyTab" type="button" hidden>重点客户</button>
+          <button class="scene-tab active" data-scene="news" type="button" hidden>推荐策略</button>
+        </div>
+
+        <section class="lily-agent" id="lilyAgent" aria-labelledby="agent-title" hidden>
+          <header class="agent-topbar">
+            <button class="agent-home" id="backFromAgent" type="button" aria-label="返回触达转化 Lily 首页">
+              <i data-lucide="arrow-left" aria-hidden="true"></i>
+              <span>返回首页</span>
+            </button>
+            <h1 id="agent-title">Lily分析客户池精准生成策略</h1>
+            <button class="agent-panel-button" type="button" aria-label="收起右侧面板">
+              <i data-lucide="panel-right" aria-hidden="true"></i>
+            </button>
+          </header>
+
+          <div class="agent-thread" aria-live="polite">
+            <section class="thinking-card" id="thinkingCard" aria-labelledby="thinking-title">
+              <div class="thinking-rail" aria-hidden="true">
+                <i data-lucide="circle-check-big"></i>
+                <span></span>
+              </div>
+              <div class="thinking-content">
+                <button class="thinking-summary" id="toggleThinking" type="button" aria-expanded="true" aria-controls="thinkingSteps">
+                  <span id="thinking-title">Lily 正在扫描全部 372 家客户，为你生成触达转化策略</span>
+                  <i data-lucide="chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="thinking-steps" id="thinkingSteps"></div>
+              </div>
+            </section>
+
+            <section class="followup-card" id="followupCard" aria-labelledby="followup-title" hidden>
+              <h2 id="followup-title">检查到你的高质量客户有 172 家，线索数量较少，为了更好得提供策略</h2>
+              <button class="zoe-acquire-option active" id="zoeAcquireOption" type="button" aria-pressed="true">前往 Zoe 获客</button>
+              <label class="followup-answer">
+                <span>补充说明</span>
+                <input id="followupAnswerInput" type="text" placeholder="请输入你的答案" />
+              </label>
+              <div class="followup-actions">
+                <button class="followup-primary" id="confirmFollowup" type="button">下一步</button>
+                <button id="regenerateFollowup" type="button">忽略</button>
+              </div>
+            </section>
+
+            <section class="agent-strategies" id="agentStrategies" aria-label="Lily生成的策略卡片" hidden></section>
+          </div>
+
+          <section class="agent-composer" aria-label="继续描述你的营销诉求">
+            <div class="agent-composer-input-row">
+              <textarea id="agentPromptInput" rows="2" maxlength="500" aria-label="继续描述你的营销诉求" placeholder="基于选中的策略，更详细的描述你的诉求，例如：帮我找到最近有扩产计划的华东新能源企业，并分析合适的营销话术"></textarea>
+            </div>
+            <div class="agent-composer-actions">
+              <div>
+                <button type="button"><i data-lucide="paperclip"></i>添加资料</button>
+                <button type="button"><i data-lucide="sliders-horizontal"></i>高级筛选</button>
+              </div>
+              <button class="agent-send" id="agentPromptSend" type="button">发送 <i data-lucide="send"></i></button>
+            </div>
+          </section>
+
+          <section class="strategy-modal" id="marketingDrawer" role="dialog" aria-modal="true" aria-labelledby="marketing-title" aria-hidden="true" hidden>
+            <header class="marketing-header">
+              <div class="marketing-title-row">
+                <button id="closeMarketingDrawer" type="button" aria-label="返回触达转化 Lily">
+                  <i data-lucide="arrow-left" aria-hidden="true"></i>
+                  <span>返回</span>
+                </button>
+                <h2 id="marketing-title">「新品发布策略」触达任务</h2>
+              </div>
+              <div class="marketing-header-actions">
+                <button id="saveMarketingDraft" type="button">保存草稿</button>
+                <button class="confirm-marketing" id="confirmMarketing" type="button"><i data-lucide="send"></i>发布任务</button>
+              </div>
+            </header>
+
+            <div class="marketing-content">
+              <div class="modal-main-column">
+                <section class="sequence-panel" id="sequencePanel" aria-labelledby="sequence-title">
+                  <div class="sequence-task-heading">
+                    <h3 id="sequence-title">新品发布任务_0702</h3>
+                    <span id="sequenceFitScore">匹配度 96%</span>
+                  </div>
+
+                  <label class="sequence-field sequence-name" hidden>
+                    <span>Sequence 名称</span>
+                    <input id="sequenceName" type="text" value="高价值客户触达 sequence" />
+                  </label>
+
+                  <div class="sequence-select" data-select-root="rounds">
+                    <button class="sequence-select-trigger" id="sequenceRoundTrigger" type="button" aria-expanded="false" aria-haspopup="listbox">
+                      <span>邮件轮次</span>
+                      <strong id="sequenceRoundValue">3轮</strong>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="sequence-dropdown" id="sequenceRoundMenu" role="listbox" aria-label="选择邮件轮次" hidden>
+                      <button type="button" role="option" data-step-count="1">1 轮</button>
+                      <button type="button" role="option" data-step-count="3" aria-selected="true">3 轮<i data-lucide="check" aria-hidden="true"></i></button>
+                      <button type="button" role="option" data-step-count="5">5 轮</button>
+                    </div>
+                    <select id="sequenceStepPreset" aria-label="选择默认邮件序列数量" hidden>
+                      <option value="1">1 封邮件</option>
+                      <option value="3" selected>3 封邮件</option>
+                      <option value="5">5 封邮件</option>
+                    </select>
+                  </div>
+
+                  <button id="addSequenceStep" type="button" hidden>添加步骤</button>
+                  <div class="sequence-steps" id="sequenceSteps"></div>
+                  <p id="mailBody" hidden></p>
+                  <p id="mailSubject" hidden></p>
+                  <span id="mailFitScore" hidden>匹配度 92%</span>
+                </section>
+              </div>
+
+              <aside class="modal-side-column">
+                <section class="sequence-rules-card" aria-labelledby="sequence-rules-title">
+                  <h3 id="sequence-rules-title" hidden>发送规则</h3>
+                  <label class="sequence-field">
+                    <span>发件人</span>
+                    <span class="sequence-control">
+                      <select id="sequenceSender">
+                        <option>12345678@qq.com</option>
+                        <option>John · john@ontoz.ai</option>
+                      </select>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </span>
+                  </label>
+                  <label class="sequence-field">
+                    <span>接收邮箱</span>
+                    <span class="sequence-control">
+                      <select id="sequenceReceiver">
+                        <option>同发送邮箱</option>
+                        <option>客户联系人邮箱</option>
+                      </select>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </span>
+                  </label>
+                  <label class="sequence-field">
+                    <span>邮件模版</span>
+                    <span class="sequence-control">
+                      <select id="sequenceTemplate">
+                        <option>新建模版</option>
+                        <option>首次开发信·观察破冰</option>
+                        <option>圣诞节营销模版</option>
+                        <option>展会营销系列</option>
+                        <option>自动开发客户</option>
+                      </select>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </span>
+                  </label>
+                  <label class="auto-unlock">
+                    <input id="autoUnlockContacts" type="checkbox" />
+                    <span class="auto-unlock-switch" aria-hidden="true"></span>
+                    <span class="auto-unlock-copy">
+                      <strong>自动解锁</strong>
+                      <small>对于信息不全的客户自动补全联系人方式</small>
+                    </span>
+                  </label>
+                  <input id="deliveryStart" type="time" value="09:30" aria-label="允许发送开始时间" hidden />
+                  <input id="deliveryEnd" type="time" value="17:30" aria-label="允许发送结束时间" hidden />
+                </section>
+              </aside>
+            </div>
+          </section>
+        </section>
+
+        <section class="lily-dashboard" id="lilyDashboard" aria-labelledby="dashboard-title" hidden>
+          <header class="dashboard-topbar">
+            <nav class="breadcrumb" aria-label="面包屑">
+              <button id="backToLily" type="button">触达转化 Lily</button>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <span aria-current="page">数据看板</span>
+            </nav>
+            <div class="dashboard-heading">
+              <div>
+                <h1 id="dashboard-title">触达转化数据看板</h1>
+                <p>查看 Lily 创建的触达任务表现，识别高转化渠道并跟进关键商机。</p>
+              </div>
+              <div class="dashboard-toolbar" aria-label="看板时间范围">
+                <button class="date-range active" data-range="7" type="button">近 7 天</button>
+                <button class="date-range" data-range="30" type="button">近 30 天</button>
+                <button class="date-range" data-range="90" type="button">近 90 天</button>
+                <button class="export-dashboard" type="button"><i data-lucide="download"></i>导出</button>
+              </div>
+            </div>
+          </header>
+
+          <div class="metric-grid" aria-label="核心转化指标">
+            <article class="metric-card">
+              <div class="metric-icon indigo"><i data-lucide="send"></i></div>
+              <span>累计触达</span><strong data-metric="reach">12,480</strong>
+              <p><b>↑ 18.6%</b> 较上一周期</p>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon blue"><i data-lucide="mail-check"></i></div>
+              <span>有效送达</span><strong data-metric="delivered">11,806</strong>
+              <p><b>94.6%</b> 平均送达率</p>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon amber"><i data-lucide="mouse-pointer-click"></i></div>
+              <span>客户互动</span><strong data-metric="engaged">3,284</strong>
+              <p><b>27.8%</b> 互动率</p>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon green"><i data-lucide="badge-dollar-sign"></i></div>
+              <span>产生商机</span><strong data-metric="opportunities">426</strong>
+              <p><b>13.0%</b> 互动转商机</p>
+            </article>
+          </div>
+
+          <div class="insight-grid">
+            <article class="dashboard-card trend-panel">
+              <header><div><h2>触达与转化趋势</h2><p>近 7 天每日触达人数与产生商机数</p></div><span class="chart-legend"><i></i>触达人数 <i></i>产生商机</span></header>
+              <div class="trend-chart" role="img" aria-label="近 7 天触达人数逐步上升，6月22日达到峰值">
+                <div class="chart-y"><span>2,000</span><span>1,500</span><span>1,000</span><span>500</span><span>0</span></div>
+                <svg viewBox="0 0 700 210" preserveAspectRatio="none" aria-hidden="true">
+                  <defs><linearGradient id="reachFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6366f1" stop-opacity=".22"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></linearGradient></defs>
+                  <g class="chart-grid"><line x1="0" y1="10" x2="700" y2="10"/><line x1="0" y1="57" x2="700" y2="57"/><line x1="0" y1="104" x2="700" y2="104"/><line x1="0" y1="151" x2="700" y2="151"/><line x1="0" y1="198" x2="700" y2="198"/></g>
+                  <path class="chart-area" d="M0 165 L116 145 L233 132 L350 92 L466 108 L583 52 L700 70 L700 210 L0 210 Z"/>
+                  <polyline class="reach-line" points="0,165 116,145 233,132 350,92 466,108 583,52 700,70"/>
+                  <polyline class="opportunity-line" points="0,188 116,180 233,183 350,165 466,172 583,151 700,158"/>
+                </svg>
+                <div class="chart-x"><span>6月17日</span><span>6月18日</span><span>6月19日</span><span>6月20日</span><span>6月21日</span><span>6月22日</span><span>6月23日</span></div>
+              </div>
+            </article>
+
+            <article class="dashboard-card channel-panel">
+              <header><div><h2>渠道表现</h2><p>按产生商机贡献排序</p></div><button type="button" aria-label="查看更多渠道"><i data-lucide="ellipsis"></i></button></header>
+              <div class="channel-list">
+                <div class="channel-row"><div><span class="channel-dot wecom"></span><strong>企业微信</strong><small>送达率 98.2%</small></div><b>42%</b><span class="channel-bar"><i style="width:42%"></i></span></div>
+                <div class="channel-row"><div><span class="channel-dot email"></span><strong>邮件</strong><small>送达率 92.8%</small></div><b>31%</b><span class="channel-bar"><i style="width:31%"></i></span></div>
+                <div class="channel-row"><div><span class="channel-dot sms"></span><strong>短信</strong><small>送达率 96.4%</small></div><b>18%</b><span class="channel-bar"><i style="width:18%"></i></span></div>
+                <div class="channel-row"><div><span class="channel-dot linkedin"></span><strong>LinkedIn</strong><small>送达率 88.6%</small></div><b>9%</b><span class="channel-bar"><i style="width:9%"></i></span></div>
+              </div>
+            </article>
+          </div>
+
+          <section class="dashboard-card task-panel" aria-labelledby="task-title">
+            <header class="task-header">
+              <div><h2 id="task-title">触达任务</h2><p>共 18 个任务，5 个正在执行</p></div>
+              <div class="task-controls">
+                <label class="task-search"><i data-lucide="search"></i><input id="taskSearch" type="search" aria-label="搜索触达任务" placeholder="搜索任务" /></label>
+                <div class="task-tabs" role="group" aria-label="任务状态筛选">
+                  <button class="active" data-status="all" type="button">全部</button>
+                  <button data-status="running" type="button">进行中</button>
+                  <button data-status="completed" type="button">已完成</button>
+                </div>
+              </div>
+            </header>
+            <div class="task-table-wrap">
+              <table class="task-table">
+                <thead><tr><th>任务名称</th><th>目标人群</th><th>渠道</th><th>触达/互动</th><th>商机</th><th>状态</th><th>更新时间</th><th></th></tr></thead>
+                <tbody id="taskTableBody">
+                  <tr data-status="running"><td><strong>华东新能源扩产客户触达</strong><small>由新闻热点策略创建</small></td><td>1,280 人</td><td><span class="channel-tag">企业微信</span></td><td>1,124 / 386</td><td><b>58</b></td><td><span class="status running">进行中</span></td><td>10 分钟前</td><td><button class="task-detail" type="button">查看</button></td></tr>
+                  <tr data-status="completed"><td><strong>沉默高价值客户唤醒</strong><small>由老客维护策略创建</small></td><td>846 人</td><td><span class="channel-tag">邮件</span></td><td>792 / 241</td><td><b>37</b></td><td><span class="status completed">已完成</span></td><td>昨天 18:42</td><td><button class="task-detail" type="button">查看</button></td></tr>
+                  <tr data-status="running"><td><strong>欧盟碳关税合规服务推广</strong><small>由政策热点策略创建</small></td><td>620 人</td><td><span class="channel-tag">邮件 + 短信</span></td><td>574 / 198</td><td><b>29</b></td><td><span class="status running">进行中</span></td><td>今天 09:16</td><td><button class="task-detail" type="button">查看</button></td></tr>
+                  <tr data-status="completed"><td><strong>东南亚储能渠道招募</strong><small>由市场机会策略创建</small></td><td>438 人</td><td><span class="channel-tag">LinkedIn</span></td><td>388 / 104</td><td><b>16</b></td><td><span class="status completed">已完成</span></td><td>6月21日</td><td><button class="task-detail" type="button">查看</button></td></tr>
+                  <tr data-status="running"><td><strong>供应商认证窗口期拓客</strong><small>由新客商机策略创建</small></td><td>316 人</td><td><span class="channel-tag">企业微信</span></td><td>287 / 96</td><td><b>14</b></td><td><span class="status running">进行中</span></td><td>6月20日</td><td><button class="task-detail" type="button">查看</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="task-empty" id="taskEmpty" hidden>没有找到匹配的任务</p>
+          </section>
+        </section>
+
+        <section class="lily-secondary inquiry-page" id="lilyInquiryPage" aria-label="询盘消息" hidden>
+          <header class="inquiry-channel-header">
+            <nav class="inquiry-channel-tabs" aria-label="询盘渠道">
+              <button class="active" data-inquiry-channel="email" type="button" aria-pressed="true"><i data-lucide="mail"></i><span>邮件</span><b data-channel-count="email"></b></button>
+              <button data-inquiry-channel="whatsapp" type="button" aria-pressed="false"><i data-lucide="message-circle"></i><span>WhatsApp</span><b data-channel-count="whatsapp"></b></button>
+              <button data-inquiry-channel="whatsapp-business" type="button" aria-pressed="false"><i data-lucide="badge-check"></i><span>WhatsApp 企业号</span><b data-channel-count="whatsapp-business"></b></button>
+            </nav>
+            <span class="inquiry-demo-label" title="消息和群组仅在当前页面演示，刷新后恢复示例数据">演示模式 · 消息不会实际发送</span>
+          </header>
+          <div class="inquiry-account-bar">
+            <div class="inquiry-account-control"><span class="inquiry-account-icon"><i data-lucide="user-round"></i></span><label for="inquiryAccountSelect">当前账号</label><select id="inquiryAccountSelect" aria-label="切换当前账号"></select><span class="inquiry-account-status">示例账号</span></div>
+            <div class="inquiry-account-actions" id="inquiryAccountActions" hidden>
+              <button id="inquiryFindContacts" type="button"><i data-lucide="user-round-search"></i>查找联系人</button>
+              <button id="inquiryCreateGroup" type="button"><i data-lucide="users-round"></i>创建群组</button>
+            </div>
+          </div>
+          <div class="inquiry-workbench">
+            <aside class="inquiry-list" aria-labelledby="inquiry-list-title">
+              <header class="inquiry-list-header">
+                <div class="inquiry-list-title-row">
+                  <div>
+                    <h2 id="inquiry-list-title">全部会话</h2>
+                    <span id="inquiryListCount">0 个会话</span>
+                  </div>
+                  <div class="inquiry-status-tabs" role="tablist" aria-label="会话状态">
+                    <button class="active" data-inquiry-status="all" type="button" role="tab" aria-selected="true">全部</button>
+                    <button data-inquiry-status="unread" type="button" role="tab" aria-selected="false">未读</button>
+                  </div>
+                </div>
+                <label class="inquiry-search">
+                  <i data-lucide="search" aria-hidden="true"></i>
+                  <input id="inquirySearchInput" type="search" autocomplete="off" placeholder="搜索客户、公司或消息" aria-label="搜索询盘消息" />
+                </label>
+
+              </header>
+              <div class="inquiry-conversation-list" id="inquiryConversationList" role="listbox" aria-label="会话列表"></div>
+              <p class="inquiry-empty" id="inquiryEmpty" hidden><i data-lucide="search-x"></i><strong>没有找到会话</strong><span>试试清除搜索或切换筛选条件</span></p>
+            </aside>
+
+            <article class="inquiry-chat" id="inquiryChat" aria-labelledby="inquiryChatName">
+              <header class="inquiry-chat-header">
+                <button class="inquiry-mobile-back" id="inquiryMobileBack" type="button" aria-label="返回会话列表"><i data-lucide="arrow-left"></i></button>
+                <span class="inquiry-avatar" id="inquiryChatAvatar">C</span>
+                <div class="inquiry-chat-person">
+                  <h2 id="inquiryChatName">Chris</h2>
+                  <p id="inquiryChatIdentity"></p>
+                </div>
+                <span class="inquiry-channel-pill" id="inquiryChatChannel"></span>
+                <button class="inquiry-company-toggle" id="inquiryCompanyToggle" type="button" aria-label="查看公司资料" aria-controls="inquiryCompanyPanel" aria-expanded="true">
+                  <i data-lucide="building-2"></i><span>公司资料</span>
+                </button>
+              </header>
+
+              <div class="inquiry-thread-context" id="inquiryThreadContext" hidden>
+                <span>邮件主题</span>
+                <strong id="inquiryThreadSubject"></strong>
+              </div>
+
+              <div class="chat-thread" id="inquiryChatThread" role="log" aria-live="polite" aria-label="会话消息"></div>
+
+              <footer class="inquiry-composer" id="inquiryComposer">
+                <div class="inquiry-ai-panel" id="inquiryAiPanel" aria-live="polite" hidden>
+                  <header>
+                    <div><span><i data-lucide="sparkles"></i></span><p><strong>AI 润色</strong><small>优化表达，不改变你的核心意思</small></p></div>
+                    <button id="inquiryAiClose" type="button" aria-label="关闭 AI 润色"><i data-lucide="x"></i></button>
+                  </header>
+                  <div class="inquiry-ai-tones" role="radiogroup" aria-label="选择润色语气">
+                    <button class="active" data-inquiry-tone="professional" type="button" role="radio" aria-checked="true">专业</button>
+                    <button data-inquiry-tone="friendly" type="button" role="radio" aria-checked="false">友好</button>
+                    <button data-inquiry-tone="concise" type="button" role="radio" aria-checked="false">简洁</button>
+                  </div>
+                  <div class="inquiry-ai-result" id="inquiryAiResult">
+                    <div class="inquiry-ai-loading" id="inquiryAiLoading"><i data-lucide="loader-circle"></i>正在优化回复…</div>
+                    <p id="inquiryAiText" hidden></p>
+                  </div>
+                  <footer id="inquiryAiActions" hidden>
+                    <button id="inquiryAiKeep" type="button">保留原文</button>
+                    <button id="inquiryAiRegenerate" type="button"><i data-lucide="refresh-cw"></i>重新生成</button>
+                    <button class="primary" id="inquiryAiApply" type="button"><i data-lucide="check"></i>替换草稿</button>
+                  </footer>
+                </div>
+
+                <p class="inquiry-reply-context" id="inquiryReplyContext"></p>
+                <div class="inquiry-attachment-list" id="inquiryAttachmentList" aria-label="待发送附件" hidden></div>
+                <textarea id="inquiryReplyInput" rows="3" maxlength="3000" aria-label="回复询盘消息" placeholder="输入回复内容"></textarea>
+                <div class="inquiry-composer-toolbar">
+                  <div>
+                    <input id="inquiryFileInput" type="file" multiple hidden />
+                    <input id="inquiryMediaInput" type="file" accept="image/jpeg,image/png,image/gif,image/webp,video/mp4,video/webm,video/quicktime" multiple hidden />
+                    <button id="inquiryMediaButton" type="button" hidden><i data-lucide="image-plus"></i>图片/视频</button>
+                    <button id="inquiryAttachButton" type="button"><i data-lucide="paperclip"></i>添加附件</button>
+                    <button class="inquiry-ai-trigger" id="inquiryAiTrigger" type="button" disabled><i data-lucide="sparkles"></i>AI 润色</button>
+                  </div>
+                  <div>
+                    <span id="inquiryCharacterCount">0 / 3000</span>
+                    <button class="send-reply" id="inquirySendReply" type="button" disabled>发送 <i data-lucide="send"></i></button>
+                  </div>
+                </div>
+              </footer>
+            </article>
+
+            <div class="inquiry-chat-empty" id="inquiryChatEmpty" hidden><i data-lucide="messages-square"></i><h2>开启一段新对话</h2><p>从左侧选择会话，或查找联系人开始沟通</p></div>
+            <aside class="inquiry-company-panel" id="inquiryCompanyPanel" aria-labelledby="inquiryCompanyPanelTitle">
+              <header class="inquiry-company-header">
+                <button class="inquiry-company-mobile-back" id="inquiryCompanyMobileBack" type="button" aria-label="返回会话"><i data-lucide="arrow-left"></i></button>
+                <span class="inquiry-company-header-icon"><i data-lucide="building-2"></i></span>
+                <div>
+                  <h2 id="inquiryCompanyPanelTitle">公司资料</h2>
+                  <p>来自客户池的企业信息</p>
+                </div>
+                <button class="inquiry-company-close" id="inquiryCompanyClose" type="button" aria-label="收起公司资料"><i data-lucide="chevron-right"></i></button>
+              </header>
+              <div class="inquiry-company-body" id="inquiryCompanyBody"></div>
+            </aside>
+          </div>
+        </section>
+
+        <dialog class="inquiry-dialog" id="inquiryContactDialog" aria-labelledby="inquiryContactDialogTitle">
+          <header><div><h2 id="inquiryContactDialogTitle">查找联系人</h2><p id="inquiryContactAccount"></p></div><button data-inquiry-dialog-close type="button" aria-label="关闭联系人窗口"><i data-lucide="x"></i></button></header>
+          <div class="inquiry-group-name" id="inquiryGroupNameField" hidden><label for="inquiryGroupName">群组名称 <small>必填 · 最多 60 字</small></label><input id="inquiryGroupName" maxlength="60" placeholder="例如：Northstar 采购项目组" autocomplete="off" /></div>
+          <label class="inquiry-search"><i data-lucide="search"></i><input id="inquiryContactSearch" type="search" placeholder="搜索姓名、公司或电话号码" aria-label="搜索联系人" /></label>
+          <p class="inquiry-contact-hint" id="inquiryContactHint">选择联系人开始聊天</p>
+          <div class="inquiry-contact-results" id="inquiryContactResults"></div>
+          <footer id="inquiryGroupFooter" hidden><span id="inquiryGroupSelected" aria-live="polite">已选 0 人 · 至少选择 2 人</span><button id="inquiryConfirmGroup" class="primary" type="button" disabled>创建群组</button></footer>
+        </dialog>
+        <dialog class="inquiry-dialog inquiry-media-dialog" id="inquiryMediaDialog" aria-labelledby="inquiryMediaTitle"><header><h2 id="inquiryMediaTitle">图片预览</h2><button id="inquiryMediaClose" type="button" aria-label="关闭图片预览"><i data-lucide="x"></i></button></header><img id="inquiryMediaPreview" alt="" /></dialog>
+
+        <section class="lily-secondary templates-page" id="lilyTemplatesPage" aria-labelledby="templates-title" hidden>
+          <nav class="lily-breadcrumb" aria-label="面包屑">
+            <button class="back-to-lily" type="button">触达转化Lily</button>
+            <i data-lucide="chevron-right" aria-hidden="true"></i>
+            <span aria-current="page" id="templates-title">话术模板</span>
+          </nav>
+
+          <div class="template-tabs compact-tabs" role="tablist" aria-label="话术模板类型">
+            <button class="active" type="button" role="tab" aria-selected="true">单轮邮件</button>
+            <button type="button" role="tab" aria-selected="false">多轮邮件</button>
+          </div>
+
+          <div class="template-grid" aria-label="邮件模板列表">
+            <button class="template-card new-template" type="button"><i data-lucide="plus"></i><span>新建邮件</span></button>
+            <article class="template-card featured"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>首次开发信·观察破冰型</h2><span>行业专家</span></header><p>单轮首次开发信·观察破冰</p></article>
+            <article class="template-card featured"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>首次开发信·观察破冰型</h2><span>行业专家</span></header><p>单轮首次开发信·观察破冰</p></article>
+            <article class="template-card"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>自定义模板</h2></header><p>2024-12-23 14:39:44</p></article>
+            <article class="template-card"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>自定义模板</h2></header><p>2024-12-23 14:39:44</p></article>
+            <article class="template-card"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>自定义模板</h2></header><p>2024-12-23 14:39:44</p></article>
+            <article class="template-card"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>自定义模板</h2></header><p>2024-12-23 14:39:44</p></article>
+            <article class="template-card"><button class="template-more" type="button" aria-label="更多操作"><i data-lucide="more-vertical"></i></button><header><h2>自定义模板</h2></header><p>2024-12-23 14:39:44</p></article>
+          </div>
+        </section>
+
+        <section class="lily-secondary marketing-tasks-page" id="lilyTasksPage" aria-labelledby="lily-tasks-title" hidden>
+          <nav class="lily-breadcrumb" aria-label="面包屑">
+            <button class="back-to-lily" type="button">触达转化Lily</button>
+            <i data-lucide="chevron-right" aria-hidden="true"></i>
+            <span aria-current="page" id="lily-tasks-title">任务管理</span>
+          </nav>
+
+          <div class="task-summary-row" aria-label="任务状态概览">
+            <article><span>进行中</span><strong>23</strong></article>
+            <article><span>已完成</span><strong>23</strong></article>
+            <article><span>已停止</span><strong>23</strong></article>
+          </div>
+
+          <div class="lily-task-list">
+            <article class="lily-task-card" data-secondary-task-status="running">
+              <header><h2>新品发布策略任务</h2><span class="task-badge running">策略触达</span></header>
+              <div class="task-stat-row">
+                <div><strong>8</strong><span>持续天数</span></div>
+                <div><strong>小小</strong><span>发起人</span></div>
+                <div><strong>727</strong><span>已触达公司</span></div>
+                <div><strong>1328</strong><span>已触达联系人</span></div>
+              </div>
+              <footer><span>触达客群</span><b>Filter 1</b><b>Filter 2</b><b>Filter 3</b><b>Filter 4</b><b>Filter 5</b><span>触达模版</span><button type="button">新客触达标准模版</button><button class="open-task-template" type="button" aria-label="打开模板"><i data-lucide="arrow-up-right"></i></button></footer>
+            </article>
+          </div>
+        </section>
+
+        <section id="johnPage" class="jn-app" aria-label="24/7 投流 John" hidden>
+          <div id="johnApp"></div>
+          <dialog id="johnDialog" class="jn-dialog" aria-labelledby="johnDialogTitle"></dialog>
+        </section>
+
+        <section class="wendy-page" id="wendyPage" aria-label="社媒运营 Wendy" hidden>
+          <div id="wendyApp" class="wd-app"></div>
+        </section>
+
+        <section class="lucas-app" id="lucasPage" aria-label="Lucas 建站工作台" hidden>
+          <div id="lucasApp"><p>正在载入 Lucas 建站工作台…</p></div>
+          <dialog id="lucasDialog" class="lc-dialog" aria-labelledby="lcDialogTitle"></dialog>
+        </section>
+
+        <section class="core-page ontology-page" id="ontologyPage" aria-labelledby="ontology-title" hidden>
+          <div class="ontology-container">
+            <header class="ontology-page-header">
+              <div>
+                <h1 id="ontology-title">企业本体</h1>
+                <p>集中查看 OntoZ 对企业业务、产品与市场知识的理解</p>
+              </div>
+              <span class="ontology-updated"><i data-lucide="clock-3"></i>最近更新：2026年7月30日</span>
+            </header>
+
+            <section class="ontology-card ontology-score-card" aria-labelledby="ontology-score-title">
+              <div class="ontology-gauge-column">
+                <div class="ontology-gauge" role="img" aria-label="企业本体得分 82 分，满分 100 分">
+                  <div class="ontology-gauge-value"><strong>82</strong><span>/ 100</span></div>
+                </div>
+                <p class="ontology-score-level">理解良好</p>
+              </div>
+              <div class="ontology-score-content">
+                <p class="ontology-eyebrow">企业本体得分</p>
+                <h2 id="ontology-score-title">OntoZ 对企业的理解程度</h2>
+                <p class="ontology-summary">已能较准确理解企业的核心业务、产品能力与目标市场，可支持智能体开展日常获客与营销工作。</p>
+                <div class="ontology-dimensions" aria-label="企业本体得分维度">
+                  <div class="ontology-dimension">
+                    <header><span>业务信息</span><strong>92%</strong></header>
+                    <div class="ontology-progress" role="progressbar" aria-label="业务信息完整度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92"><span style="--progress: 92%"></span></div>
+                  </div>
+                  <div class="ontology-dimension">
+                    <header><span>产品知识</span><strong>84%</strong></header>
+                    <div class="ontology-progress" role="progressbar" aria-label="产品知识完整度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="84"><span style="--progress: 84%"></span></div>
+                  </div>
+                  <div class="ontology-dimension">
+                    <header><span>市场认知</span><strong>70%</strong></header>
+                    <div class="ontology-progress" role="progressbar" aria-label="市场认知完整度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><span style="--progress: 70%"></span></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="ontology-card ontology-section" aria-labelledby="company-profile-title">
+              <header class="ontology-section-header">
+                <div>
+                  <h2 id="company-profile-title">企业简介</h2>
+                  <p>从企业资料与公开信息中识别的基础档案</p>
+                </div>
+                <span class="ontology-verified"><i data-lucide="badge-check"></i>核心信息已核验</span>
+              </header>
+              <dl class="company-facts">
+                <div class="company-fact"><dt>公司名称</dt><dd>NOX Robotics Ltd.</dd></div>
+                <div class="company-fact"><dt>官网</dt><dd><a href="https://noxrobotics.ai" target="_blank" rel="noreferrer">noxrobotics.ai<i data-lucide="external-link"></i></a></dd></div>
+                <div class="company-fact"><dt>国家 / 地区</dt><dd>新加坡</dd></div>
+                <div class="company-fact"><dt>成立年份</dt><dd>2021</dd></div>
+                <div class="company-fact"><dt>公司类型</dt><dd>私营企业</dd></div>
+                <div class="company-fact"><dt>员工人数</dt><dd>201–500 人</dd></div>
+              </dl>
+              <div class="company-description">
+                <h3>公司简介</h3>
+                <p>NOX Robotics 专注于面向制造、仓储与设施巡检场景的通用人形机器人及具身智能解决方案，通过开放集成能力帮助企业将感知、决策与执行接入真实业务流程。</p>
+              </div>
+            </section>
+
+            <section class="ontology-card ontology-section" aria-labelledby="ontology-modules-title">
+              <header class="ontology-section-header">
+                <div>
+                  <h2 id="ontology-modules-title">本体功能模块</h2>
+                  <p>按业务场景组织企业知识，为各智能体提供统一依据</p>
+                </div>
+              </header>
+              <div class="ontology-module-grid">
+                <a class="ontology-module buyer" href="#ontology/buyer-search-strategy" data-ontology-module="买家搜索策略" data-ontology-ready="true">
+                  <span class="ontology-module-icon"><i data-lucide="scan-search"></i></span>
+                  <h3>买家搜索策略</h3>
+                  <p class="ontology-module-count">12 套策略</p>
+                  <p class="ontology-module-description">沉淀目标市场、买家画像、搜索条件和线索判断规则，让 Zoe 更准确地定位潜在客户。</p>
+                  <footer><span>更新于 2 天前</span><span class="ontology-module-action">查看模块<i data-lucide="arrow-right"></i></span></footer>
+                </a>
+                <a class="ontology-module graph" href="#ontology/industry-knowledge-graph" data-ontology-module="行业知识图谱">
+                  <span class="ontology-module-icon"><i data-lucide="network"></i></span>
+                  <h3>行业知识图谱</h3>
+                  <p class="ontology-module-count">386 个实体</p>
+                  <p class="ontology-module-description">连接行业、应用场景、产品能力、标准认证与竞争关系，形成可追溯的业务知识网络。</p>
+                  <footer><span>更新于昨天</span><span class="ontology-module-action">查看模块<i data-lucide="arrow-right"></i></span></footer>
+                </a>
+                <a class="ontology-module knowledge" href="#ontology/enterprise-knowledge-base" data-ontology-module="企业知识库">
+                  <span class="ontology-module-icon"><i data-lucide="library-big"></i></span>
+                  <h3>企业知识库</h3>
+                  <p class="ontology-module-count">128 份资料</p>
+                  <p class="ontology-module-description">统一管理产品手册、客户案例、FAQ、品牌资料与销售素材，确保团队使用同一版本。</p>
+                  <footer><span>更新于 3 小时前</span><span class="ontology-module-action">查看模块<i data-lucide="arrow-right"></i></span></footer>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="core-page buyer-strategy-page" id="buyerStrategyPage" aria-labelledby="buyer-strategy-title" hidden>
+          <div class="buyer-strategy-container">
+            <nav class="buyer-strategy-breadcrumb" aria-label="买家搜索策略路径">
+              <a href="#ontology"><i data-lucide="arrow-left"></i>返回企业本体</a>
+              <span aria-hidden="true">/</span>
+              <span>买家搜索策略</span>
+            </nav>
+
+            <header class="buyer-strategy-header">
+              <div>
+                <p class="buyer-strategy-eyebrow">企业本体 · 买家理解</p>
+                <h1 id="buyer-strategy-title">买家搜索策略</h1>
+                <p>从买家画像出发，逐层定义搜索关键词、主营业务与产业链身份，让潜在买家搜索更准确、更可解释。</p>
+              </div>
+              <div class="buyer-strategy-header-actions">
+                <a class="buyer-strategy-validation-entry" href="#ontology/buyer-search-strategy/keyword-validation">
+                  <i data-lucide="search-check"></i>
+                  搜索词验证
+                </a>
+                <div class="buyer-strategy-meta">
+                  <span><i data-lucide="git-branch"></i>策略版本 v3.2</span>
+                  <span><i data-lucide="clock-3"></i>更新于 2 天前</span>
+                </div>
+              </div>
+            </header>
+
+            <section class="buyer-strategy-overview" aria-label="图谱规模">
+              <article><span>第一层级</span><strong>3</strong><p>买家画像</p></article>
+              <article><span>第二层级</span><strong>9</strong><p>搜索关键词</p></article>
+              <article><span>第三层级</span><strong>15</strong><p>主营 / 排除业务</p></article>
+              <article><span>第四层级</span><strong>15</strong><p>产业链身份</p></article>
+            </section>
+
+            <section class="buyer-graph-card" aria-labelledby="buyer-graph-title">
+              <header class="buyer-graph-toolbar">
+                <div>
+                  <h2 id="buyer-graph-title">买家策略图谱</h2>
+                  <p>选择节点查看关系说明，或突出查看包含与排除条件</p>
+                </div>
+                <div class="buyer-graph-filters" role="group" aria-label="图谱关系筛选">
+                  <button class="active" type="button" data-graph-filter="all" aria-pressed="true">全部关系</button>
+                  <button type="button" data-graph-filter="include" aria-pressed="false"><span class="filter-dot include"></span>只看包含</button>
+                  <button type="button" data-graph-filter="exclude" aria-pressed="false"><span class="filter-dot exclude"></span>只看排除</button>
+                </div>
+              </header>
+
+              <section class="buyer-graph-focus" aria-live="polite" aria-atomic="true">
+                <span class="buyer-graph-focus-icon"><i data-lucide="focus"></i></span>
+                <div>
+                  <p id="buyerGraphFocusLevel">第一层级 · 买家画像</p>
+                  <h3 id="buyerGraphFocusTitle">工业制造企业</h3>
+                  <span id="buyerGraphFocusDescription">具备真实生产场景，希望通过柔性自动化和人机协作提升效率的制造企业。</span>
+                </div>
+              </section>
+
+              <p class="buyer-graph-swipe-hint"><i data-lucide="move-horizontal"></i>左右滑动查看完整四层关系</p>
+
+              <div class="buyer-graph-scroll" tabindex="0" aria-label="买家搜索策略四层图谱，可横向滚动">
+                <div class="buyer-graph-canvas" id="buyerGraphCanvas" data-filter="all">
+                  <header class="buyer-graph-levels" aria-hidden="true">
+                    <div><span>01</span><strong>买家画像</strong><small>目标客户是谁</small></div>
+                    <div><span>02</span><strong>买家搜索关键词</strong><small>如何找到他们</small></div>
+                    <div><span>03</span><strong>主营产品 / 业务</strong><small>经营什么</small></div>
+                    <div><span>04</span><strong>产业链身份</strong><small>处于什么位置</small></div>
+                  </header>
+
+                  <div class="buyer-graph-lanes">
+                    <article class="buyer-graph-lane active" data-graph-lane="manufacturing">
+                      <div class="buyer-graph-stage profile-stage">
+                        <button class="buyer-graph-node profile-node selected" type="button" data-graph-node data-node-level="第一层级 · 买家画像" data-node-title="工业制造企业" data-node-description="具备真实生产场景，希望通过柔性自动化和人机协作提升效率的制造企业。" aria-pressed="true">
+                          <span class="node-icon"><i data-lucide="factory"></i></span>
+                          <span><strong>工业制造企业</strong><small>柔性生产 · 质量检测</small></span>
+                        </button>
+                      </div>
+                      <div class="buyer-graph-stage keyword-stage">
+                        <button class="buyer-graph-node keyword-node" type="button" data-graph-node data-node-level="第二层级 · 买家搜索关键词" data-node-title="工业制造搜索词" data-node-description="使用买家常用的英文行业词组合，搜索正在关注人形机器人、柔性自动化和视觉质检的制造企业。" aria-pressed="false">
+                          <span class="node-label">搜索关键词</span>
+                          <span class="keyword-chip">humanoid robot manufacturing</span>
+                          <span class="keyword-chip">flexible automation</span>
+                          <span class="keyword-chip">robotic visual inspection</span>
+                        </button>
+                      </div>
+                      <div class="buyer-graph-stage relation-stage">
+                        <div class="buyer-graph-node-stack">
+                          <button class="buyer-graph-node relation-node include-node" type="button" data-graph-node data-relation="include" data-node-level="第三层级 · 应包含业务" data-node-title="工业自动化相关业务" data-node-description="这些业务表明企业具有生产自动化、柔性改造或视觉质检场景，是 NOX 的高相关买家。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-check-big"></i>应包含</span>
+                            <span class="node-tags"><b>工业自动化集成</b><b>生产线柔性改造</b><b>机器视觉质检</b></span>
+                          </button>
+                          <button class="buyer-graph-node relation-node exclude-node" type="button" data-graph-node data-relation="exclude" data-node-level="第三层级 · 需排除业务" data-node-title="非工业机器人业务" data-node-description="家用服务机器人和纯软件 RPA 缺少目标工业应用场景，需要从结果中排除。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-x"></i>需排除</span>
+                            <span class="node-tags"><b>家用服务机器人</b><b>纯软件 RPA</b></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="buyer-graph-stage identity-stage">
+                        <div class="buyer-graph-node-stack">
+                          <button class="buyer-graph-node relation-node include-node" type="button" data-graph-node data-relation="include" data-node-level="第四层级 · 应包含身份" data-node-title="具备采购或集成能力" data-node-description="终端制造商、方案集成商和工程承包商具备真实应用场景或项目采购能力。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-check-big"></i>应包含</span>
+                            <span class="node-tags"><b>终端制造商</b><b>自动化方案集成商</b><b>工厂工程承包商</b></span>
+                          </button>
+                          <button class="buyer-graph-node relation-node exclude-node" type="button" data-graph-node data-relation="exclude" data-node-level="第四层级 · 需排除身份" data-node-title="缺少终端决策能力" data-node-description="零部件贸易商和培训媒体机构通常不拥有机器人项目的最终采购决策权。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-x"></i>需排除</span>
+                            <span class="node-tags"><b>机器人零部件贸易商</b><b>培训 / 媒体机构</b></span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="buyer-graph-lane" data-graph-lane="warehouse">
+                      <div class="buyer-graph-stage profile-stage">
+                        <button class="buyer-graph-node profile-node" type="button" data-graph-node data-node-level="第一层级 · 买家画像" data-node-title="仓储物流运营商" data-node-description="拥有仓库、履约中心或内部物流场景，需要提升拣选、搬运与补货效率的企业。" aria-pressed="false">
+                          <span class="node-icon"><i data-lucide="warehouse"></i></span>
+                          <span><strong>仓储物流运营商</strong><small>拣选 · 搬运 · 补货</small></span>
+                        </button>
+                      </div>
+                      <div class="buyer-graph-stage keyword-stage">
+                        <button class="buyer-graph-node keyword-node" type="button" data-graph-node data-node-level="第二层级 · 买家搜索关键词" data-node-title="仓储物流搜索词" data-node-description="围绕仓内自动化、箱件拣选和人形机器人应用进行搜索，避免泛物流关键词带来的噪声。" aria-pressed="false">
+                          <span class="node-label">搜索关键词</span>
+                          <span class="keyword-chip">warehouse humanoid robot</span>
+                          <span class="keyword-chip">intralogistics automation</span>
+                          <span class="keyword-chip">case picking robot</span>
+                        </button>
+                      </div>
+                      <div class="buyer-graph-stage relation-stage">
+                        <div class="buyer-graph-node-stack">
+                          <button class="buyer-graph-node relation-node include-node" type="button" data-graph-node data-relation="include" data-node-level="第三层级 · 应包含业务" data-node-title="仓内运营相关业务" data-node-description="仓储运营、电商履约和内部物流自动化能够提供清晰、可测量的人形机器人应用任务。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-check-big"></i>应包含</span>
+                            <span class="node-tags"><b>仓储运营</b><b>电商履约</b><b>内部物流自动化</b></span>
+                          </button>
+                          <button class="buyer-graph-node relation-node exclude-node" type="button" data-graph-node data-relation="exclude" data-node-level="第三层级 · 需排除业务" data-node-title="非仓内应用业务" data-node-description="末端配送和家庭搬运的环境、产品形态与企业级仓内机器人需求不同。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-x"></i>需排除</span>
+                            <span class="node-tags"><b>快递末端配送</b><b>家庭搬运</b></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="buyer-graph-stage identity-stage">
+                        <div class="buyer-graph-node-stack">
+                          <button class="buyer-graph-node relation-node include-node" type="button" data-graph-node data-relation="include" data-node-level="第四层级 · 应包含身份" data-node-title="仓储资产运营方" data-node-description="仓库运营方、第三方物流企业和履约中心直接管理仓内流程并拥有自动化预算。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-check-big"></i>应包含</span>
+                            <span class="node-tags"><b>仓库运营方</b><b>第三方物流企业</b><b>电商履约中心</b></span>
+                          </button>
+                          <button class="buyer-graph-node relation-node exclude-node" type="button" data-graph-node data-relation="exclude" data-node-level="第四层级 · 需排除身份" data-node-title="非场景所有者" data-node-description="设备零售商和货代经纪通常不直接运营仓内流程，不是优先目标。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-x"></i>需排除</span>
+                            <span class="node-tags"><b>物流设备零售商</b><b>货代经纪</b></span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="buyer-graph-lane" data-graph-lane="facility">
+                      <div class="buyer-graph-stage profile-stage">
+                        <button class="buyer-graph-node profile-node" type="button" data-graph-node data-node-level="第一层级 · 买家画像" data-node-title="设施管理服务商" data-node-description="负责园区、厂房或公共设施巡检与资产运维，希望提高覆盖率和报告一致性的企业。" aria-pressed="false">
+                          <span class="node-icon"><i data-lucide="building-2"></i></span>
+                          <span><strong>设施管理服务商</strong><small>巡检 · 运维 · 报告</small></span>
+                        </button>
+                      </div>
+                      <div class="buyer-graph-stage keyword-stage">
+                        <button class="buyer-graph-node keyword-node" type="button" data-graph-node data-node-level="第二层级 · 买家搜索关键词" data-node-title="设施巡检搜索词" data-node-description="围绕自主巡检、设施机器人和预测性维护搜索拥有真实运维场景的企业。" aria-pressed="false">
+                          <span class="node-label">搜索关键词</span>
+                          <span class="keyword-chip">facility inspection robot</span>
+                          <span class="keyword-chip">autonomous inspection</span>
+                          <span class="keyword-chip">predictive maintenance</span>
+                        </button>
+                      </div>
+                      <div class="buyer-graph-stage relation-stage">
+                        <div class="buyer-graph-node-stack">
+                          <button class="buyer-graph-node relation-node include-node" type="button" data-graph-node data-relation="include" data-node-level="第三层级 · 应包含业务" data-node-title="设施资产运维业务" data-node-description="设施巡检、资产运维和园区管理拥有标准路线、观察任务和结构化报告需求。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-check-big"></i>应包含</span>
+                            <span class="node-tags"><b>设施巡检</b><b>资产运维</b><b>工业园区管理</b></span>
+                          </button>
+                          <button class="buyer-graph-node relation-node exclude-node" type="button" data-graph-node data-relation="exclude" data-node-level="第三层级 · 需排除业务" data-node-title="非企业设施业务" data-node-description="消费级摄像头和清洁家政与企业设施巡检的任务深度和采购逻辑不同。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-x"></i>需排除</span>
+                            <span class="node-tags"><b>消费级安防摄像头</b><b>清洁家政</b></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="buyer-graph-stage identity-stage">
+                        <div class="buyer-graph-node-stack">
+                          <button class="buyer-graph-node relation-node include-node" type="button" data-graph-node data-relation="include" data-node-level="第四层级 · 应包含身份" data-node-title="设施运营与管理方" data-node-description="设施管理公司、公用事业运营商和园区业主对巡检任务与资产结果负责。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-check-big"></i>应包含</span>
+                            <span class="node-tags"><b>设施管理公司</b><b>公用事业运营商</b><b>工业园区业主</b></span>
+                          </button>
+                          <button class="buyer-graph-node relation-node exclude-node" type="button" data-graph-node data-relation="exclude" data-node-level="第四层级 · 需排除身份" data-node-title="缺少设施运营职责" data-node-description="物业中介和设备耗材供应商通常不负责设施巡检流程与自动化投入。" aria-pressed="false">
+                            <span class="node-relation-label"><i data-lucide="circle-x"></i>需排除</span>
+                            <span class="node-tags"><b>物业中介</b><b>设备耗材供应商</b></span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="core-page keyword-validation-page" id="keywordValidationPage" aria-labelledby="keyword-validation-title" hidden>
+          <div class="keyword-validation-container">
+            <nav class="keyword-validation-breadcrumb" aria-label="搜索词验证路径">
+              <a href="#ontology">企业本体</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <a href="#ontology/buyer-search-strategy">买家搜索策略</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <span>搜索词验证</span>
+            </nav>
+
+            <section class="keyword-search-card" aria-labelledby="keyword-validation-title">
+              <header class="keyword-search-heading">
+                <div>
+                  <h1 id="keyword-validation-title">搜索词验证</h1>
+                  <p>试搜关键词并查看企业结果，验证搜索词是否能准确找到目标买家。</p>
+                </div>
+                <div class="keyword-search-actions">
+                  <button class="keyword-history-button" id="keywordHistoryButton" type="button" aria-haspopup="dialog" aria-controls="keywordHistoryDrawer" aria-expanded="false">
+                    <i data-lucide="history" aria-hidden="true"></i>
+                    历史记录
+                    <span class="keyword-history-count" id="keywordHistoryCount" aria-label="0 条历史记录" hidden>0</span>
+                  </button>
+                  <button class="keyword-configure-button" id="keywordConfigureButton" type="button" hidden>
+                    配置搜索词至画像
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </header>
+              <form class="keyword-search-form" id="keywordSearchForm">
+                <label class="keyword-search-input">
+                  <i data-lucide="search" aria-hidden="true"></i>
+                  <input id="keywordSearchInput" type="search" autocomplete="off" placeholder="输入买家搜索关键词，如 Solar energy" aria-label="输入搜索关键词" />
+                </label>
+                <button class="keyword-search-submit" id="keywordSearchSubmit" type="submit">
+                  <span>开始搜索</span>
+                  <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </button>
+              </form>
+              <div class="keyword-mock-cases" aria-label="功能验证数据">
+                <span>Mock 验证：</span>
+                <button type="button" data-keyword-mock="duplicate"><i data-lucide="copy-check"></i>重复搜索词</button>
+                <button type="button" data-keyword-mock="empty"><i data-lucide="file-x-2"></i>空结果</button>
+              </div>
+            </section>
+
+            <section class="keyword-zoe-prompt" id="keywordZoePrompt" aria-labelledby="keyword-zoe-title" hidden>
+              <span class="keyword-zoe-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+              <div>
+                <h2 id="keyword-zoe-title">让 Zoe 自动判断客户信息</h2>
+                <p>本次搜索所有的“待判定”都交由 Zoe 进行后续的匹配。</p>
+              </div>
+              <button id="keywordZoeConfirm" type="button">
+                确认交给 Zoe
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </button>
+            </section>
+
+            <section class="keyword-results-card" aria-labelledby="keyword-results-title">
+              <header class="keyword-results-header" id="keywordResultsHeader" hidden>
+                <div>
+                  <h2 id="keyword-results-title">搜索结果</h2>
+                  <p id="keywordResultsSummary">共找到 20 家企业</p>
+                </div>
+                <div class="keyword-result-counts" id="keywordResultCounts" aria-label="结果类型统计"></div>
+              </header>
+              <div class="keyword-results" id="keywordResults" aria-live="polite" aria-busy="false">
+                <div class="keyword-empty-state keyword-initial-state">
+                  <span class="keyword-empty-icon"><i data-lucide="search-check" aria-hidden="true"></i></span>
+                  <h2>试搜一个关键词</h2>
+                  <p>每次返回 20 家企业，先验证搜索质量，再配置到买家画像。</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="keyword-modal" id="keywordDuplicateModal" role="dialog" aria-modal="true" aria-labelledby="keyword-duplicate-title" aria-hidden="true" hidden>
+          <button class="keyword-modal-backdrop" type="button" data-close-keyword-modal aria-label="关闭弹窗"></button>
+          <div class="keyword-modal-panel">
+            <header>
+              <h2 id="keyword-duplicate-title">该词已在画像中</h2>
+              <button type="button" data-close-keyword-modal aria-label="关闭"><i data-lucide="x" aria-hidden="true"></i></button>
+            </header>
+            <p id="keywordDuplicateDescription"></p>
+            <footer>
+              <button class="keyword-modal-secondary" type="button" data-close-keyword-modal>取消</button>
+              <button class="keyword-modal-primary" id="keywordDuplicateContinue" type="button">继续搜索</button>
+            </footer>
+          </div>
+        </section>
+
+        <section class="keyword-modal" id="keywordConfigureModal" role="dialog" aria-modal="true" aria-labelledby="keyword-configure-title" aria-hidden="true" hidden>
+          <button class="keyword-modal-backdrop" type="button" data-close-keyword-modal aria-label="关闭弹窗"></button>
+          <div class="keyword-modal-panel">
+            <header>
+              <h2 id="keyword-configure-title">配置搜索词至画像</h2>
+              <button type="button" data-close-keyword-modal aria-label="关闭"><i data-lucide="x" aria-hidden="true"></i></button>
+            </header>
+            <label class="keyword-persona-field">
+              <span>请选择具体配置到哪个画像</span>
+              <span class="keyword-persona-select">
+                <select id="keywordPersonaSelect">
+                  <option value="">选择买家画像</option>
+                  <option value="工业制造企业">工业制造企业</option>
+                  <option value="仓储物流运营商">仓储物流运营商</option>
+                  <option value="设施管理服务商">设施管理服务商</option>
+                </select>
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+              </span>
+            </label>
+            <footer>
+              <button class="keyword-modal-secondary" type="button" data-close-keyword-modal>取消</button>
+              <button class="keyword-modal-primary" id="keywordConfigureConfirm" type="button" disabled>确认配置</button>
+            </footer>
+          </div>
+        </section>
+
+        <section class="keyword-history-drawer" id="keywordHistoryDrawer" role="dialog" aria-modal="true" aria-labelledby="keyword-history-title" aria-hidden="true" hidden>
+          <button class="keyword-history-backdrop" type="button" data-close-keyword-history aria-label="关闭搜索历史"></button>
+          <aside class="keyword-history-panel" tabindex="-1">
+            <header>
+              <div>
+                <h2 id="keyword-history-title">搜索历史</h2>
+                <p>查看并重新打开之前的搜索结果</p>
+              </div>
+              <button type="button" data-close-keyword-history aria-label="关闭搜索历史"><i data-lucide="x" aria-hidden="true"></i></button>
+            </header>
+            <div class="keyword-history-columns" aria-hidden="true">
+              <span>搜索词</span>
+              <span>搜索时间</span>
+              <span>操作</span>
+            </div>
+            <div class="keyword-history-list" id="keywordHistoryList"></div>
+          </aside>
+        </section>
+
+        <section class="core-page dashboard-page" id="dashboardPage" aria-labelledby="core-dashboard-title" hidden>
+          <div class="core-grid">
+            <div class="core-main">
+              <section class="core-card account-overview">
+                <h1 id="core-dashboard-title">账号总览</h1>
+                <div class="overview-stats" aria-label="账号总览指标">
+                  <article><span>AI获客</span><strong>13,477</strong><small>全量 100%</small></article>
+                  <article><span>触达</span><strong>10,892</strong><small>转化率 92%</small></article>
+                  <article><span>询盘</span><strong>7,241</strong><small>转化率 78%</small></article>
+                  <article><span>报价</span><strong>15,821</strong><small>转化率 21%</small></article>
+                  <article><span>成交</span><strong>15,821</strong><small>转化率 12%</small></article>
+                </div>
+              </section>
+
+              <section class="core-card acquisition-card">
+                <header class="section-title-row">
+                  <h2>新增获客成果</h2>
+                  <div class="period-toggle" role="group" aria-label="时间范围">
+                    <button class="active" type="button">7 天</button>
+                    <button type="button">30 天</button>
+                  </div>
+                </header>
+                <div class="filter-row">
+                  <button type="button">产品线 <i data-lucide="chevron-down"></i></button>
+                  <button type="button">买家画像 <i data-lucide="chevron-down"></i></button>
+                  <button type="button">目标国家 <i data-lucide="chevron-down"></i></button>
+                </div>
+                <div class="bar-chart" aria-label="Top 10 Products by Revenue">
+                  <div><span>Powder</span><i style="--a:45%;--b:58%;--c:76%"></i></div>
+                  <div><span>Mascara</span><i style="--a:40%;--b:54%;--c:72%"></i></div>
+                  <div><span>Lip gloss</span><i style="--a:46%;--b:64%;--c:69%"></i></div>
+                  <div><span>Foundation</span><i style="--a:42%;--b:57%;--c:66%"></i></div>
+                  <div><span>Eyeliner</span><i style="--a:48%;--b:60%;--c:63%"></i></div>
+                  <div><span>Eyeshadows</span><i style="--a:38%;--b:50%;--c:59%"></i></div>
+                  <div><span>Pomade</span><i style="--a:36%;--b:47%;--c:55%"></i></div>
+                  <div><span>Rouge</span><i style="--a:34%;--b:43%;--c:51%"></i></div>
+                </div>
+                <footer class="mini-metrics">
+                  <div><span>定位并分析精准客户</span><strong>13,477 点数</strong></div>
+                  <div><span>高阶触达</span><strong>10,487 点数</strong></div>
+                  <div><span>触达客户</span><strong>7,487 点数</strong></div>
+                </footer>
+              </section>
+
+              <section class="core-card buyer-ranking">
+                <h2>买家画像排行</h2>
+                <table>
+                  <thead><tr><th></th><th>精准客户</th><th>触达</th><th>询盘</th><th>报价</th><th>成交</th></tr></thead>
+                  <tbody>
+                    <tr><td><b class="rank hot">1</b> 宠物主粮经销商</td><td>4,321 个</td><td>3,372</td><td>1,321</td><td>321</td><td>21</td></tr>
+                    <tr><td><b class="rank warm">2</b> 宠物店</td><td>3,387 个</td><td>3,387</td><td>1,087</td><td>387</td><td>87</td></tr>
+                    <tr><td><b class="rank">3</b> 宠物医院</td><td>3,132 个</td><td>2,422</td><td>832</td><td>132</td><td>32</td></tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+
+            <aside class="core-side">
+              <section class="core-card zoe-progress">
+                <h2>ZOE工作进展</h2>
+                <p>ZOE的脚步跑遍了 23 个国家，分析了103,424家公司，定位13,477家精准客户，挖掘到了32,923位高质量联系人，已建立74个AI触达任务</p>
+                <div class="side-stat-grid">
+                  <div><span>工作时长</span><strong>3477h</strong></div>
+                  <div><span>分析数据</span><strong>8,982,484,742</strong></div>
+                  <div><span>全量新客数</span><strong>54,877</strong></div>
+                  <div><span>精准联系方式</span><strong>32,923</strong></div>
+                  <div><span>全量发信数</span><strong>5,247,778</strong></div>
+                </div>
+              </section>
+
+              <section class="core-card team-card">
+                <h2>您的团队</h2>
+                <div class="team-member"><header><strong>王羽凡</strong><span>子账号</span></header><div><span>线索数量 123</span><span>询盘响应 22min</span></div><p>线索分配规则 美国 新西兰 印度 加拿大</p><div><span>触达公司 15,523</span><span>询盘数量 265</span></div></div>
+                <div class="team-member"><header><strong>Elsa</strong><span>子账号</span></header><div><span>线索数量 123</span><span>询盘响应 22min</span></div><p>线索分配规则 美国 新西兰 印度 加拿大</p><div><span>触达公司 15,523</span><span>询盘数量 265</span></div></div>
+                <div class="team-member"><header><strong>Cathy</strong><span>子账号</span></header><div><span>线索数量 123</span><span>22min</span></div><p>线索分配规则 美国 新西兰 印度 加拿大</p><div><span>触达公司 15,523</span><span>询盘数量 265</span></div></div>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="core-page customers-page" id="customersPage" aria-labelledby="customers-title" hidden>
+          <header class="list-page-header">
+            <h1 id="customers-title">客户池</h1>
+            <button class="soft-button" type="button"><i data-lucide="download"></i>导入</button>
+          </header>
+          <div class="customer-summary" aria-label="客户池指标">
+            <article><span>新客全量池</span><strong>69,881</strong></article>
+            <article><span>高质量线索池</span><strong>8,714</strong></article>
+            <article><span>触达客户</span><strong>352</strong></article>
+            <article><span>询盘客户</span><strong>245</strong></article>
+            <article><span>报价客户</span><strong>73</strong></article>
+            <article><span>成交客户</span><strong>69,881</strong></article>
+          </div>
+          <div class="customer-toolbar">
+            <label><i data-lucide="search"></i><input type="search" placeholder="公司名称/公司简介/搜索词" /></label>
+            <button type="button"><i data-lucide="funnel"></i>筛选</button>
+            <button type="button"><i data-lucide="arrow-down-up"></i>匹配度</button>
+          </div>
+          <p class="selection-line"><span></span>已选择 0 条数据</p>
+          <div class="lead-list" id="leadList"></div>
+          <footer class="pagination"><button type="button" aria-label="上一页"><i data-lucide="chevron-left"></i></button><span>1</span><strong>2</strong><span>3</span><span>...</span><button type="button" aria-label="下一页"><i data-lucide="chevron-right"></i></button></footer>
+
+          <section class="customer-detail-drawer" id="customerDetailDrawer" role="dialog" aria-modal="true" aria-labelledby="customer-detail-title" aria-hidden="true" hidden>
+            <button class="customer-detail-backdrop" type="button" data-close-customer-detail aria-label="关闭客户详情"></button>
+            <article class="customer-detail-panel" tabindex="-1">
+              <header class="customer-detail-header">
+                <h2 id="customer-detail-title">客户详情</h2>
+                <button class="customer-detail-close" id="closeCustomerDetail" type="button" aria-label="关闭客户详情"><i data-lucide="x"></i></button>
+              </header>
+              <div class="customer-detail-body" id="customerDetailBody"></div>
+            </article>
+          </section>
+        </section>
+
+        <section class="zoe-page-v2" id="zoePage" aria-labelledby="zoe-title" hidden>
+          <div class="zoe-overview zoe-overview-orbit agent-v2" id="zoeHome" data-agent="Zoe" data-zoe-screen="overview">
+            <header class="zoe-hero-card av2-header">
+              <div class="zoe-hero-copy">
+                <p class="av2-identity"><i data-lucide="user-round-search"></i>搜索开发 Zoe <span>演示数据</span></p>
+                <h1 class="zoe-home-title" id="zoe-title">让高质量客户持续进入客户池</h1>
+                <p class="zoe-home-subtitle">基于企业信息、产品关键词和目标市场，生成买家画像并扩展潜在客户名单。</p>
+                <div class="zoe-hero-actions av2-page-actions">
+                  <button class="zoe-primary-action" type="button" data-zoe-new-task><i data-lucide="wand-sparkles"></i>创建获客任务</button>
+                  <button class="zoe-secondary-action" type="button" data-zoe-task-detail><i data-lucide="send"></i>查看智能体日志</button>
+                </div>
+              </div>
+              <aside class="zoe-autopilot-status" aria-label="Zoe 运行状态">
+                <i aria-hidden="true"></i>
+                <span><strong>Zoe 正在自主工作</strong><small>3个任务正在自主执行</small></span>
+              </aside>
+            </header>
+
+            <div class="zoe-workbench av2-columns">
+              <div class="zoe-primary-column av2-main">
+                <section class="zoe-metrics" aria-label="Zoe 今日获客结果">
+                  <article>
+                    <span class="zoe-metric-icon"><i data-lucide="globe"></i></span>
+                    <div><span>全网搜索发现</span><strong><b id="zoeDiscoveryCount">86,420</b></strong><small>每天自动找客户</small></div>
+                  </article>
+                  <article>
+                    <span class="zoe-metric-icon"><i data-lucide="target"></i></span>
+                    <div><span>高质量线索</span><strong><b id="zoeLeadCount">4,720</b></strong><small>当前任务通过率 12 %</small></div>
+                  </article>
+                </section>
+
+                <section class="zoe-surface zoe-engine-card zoe-orbit-engine" aria-label="Agent 运行视图">
+                  <div class="zoe-orbit-board">
+                    <svg class="zoe-orbit-motion" viewBox="0 0 1000 760" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                      <defs>
+                        <linearGradient id="zoe-orbit-edge-gradient" x1="0" x2="1">
+                          <stop offset="0" stop-color="#745cf6" />
+                          <stop offset=".52" stop-color="#478bea" />
+                          <stop offset="1" stop-color="#0ca39b" />
+                        </linearGradient>
+                        <radialGradient id="zoe-orbit-packet-fill">
+                          <stop offset="0" stop-color="#20d4c2" />
+                          <stop offset=".48" stop-color="#447ee8" />
+                          <stop offset="1" stop-color="#7458ed" />
+                        </radialGradient>
+                        <filter id="zoe-orbit-packet-glow" x="-200%" y="-200%" width="500%" height="500%">
+                          <feGaussianBlur result="blur" stdDeviation="5" />
+                          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                        </filter>
+                        <marker id="zoe-orbit-arrow" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+                          <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b65df" />
+                        </marker>
+                      </defs>
+                      <g class="zoe-orbit-edges">
+                        <path d="M 538 214 C 514 226, 520 254, 548 266" />
+                        <path d="M 572 266 C 600 254, 606 226, 582 214" />
+                        <path d="M 150 492 C 158 450, 168 420, 182 395" />
+                        <path d="M 292 330 C 350 314, 410 314, 468 330" />
+                        <path d="M 652 330 C 684 316, 706 316, 738 330" />
+                        <path d="M 850 395 C 902 525, 810 640, 652 658" />
+                        <path d="M 468 658 C 346 716, 214 696, 118 528" />
+                      </g>
+                      <g>
+                        <circle fill="url(#zoe-orbit-packet-fill)" filter="url(#zoe-orbit-packet-glow)" opacity="0" r="5.5">
+                          <animateMotion begin="0s" calcMode="linear" dur="10.4s" keyPoints="0;1;1" keyTimes="0;.15;1" path="M 150 492 C 158 450, 168 420, 182 395" repeatCount="indefinite" />
+                          <animate attributeName="opacity" begin="0s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="0;1;1;0;0" />
+                          <animate attributeName="r" begin="0s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="2;5.5;5.5;2;2" />
+                        </circle>
+                        <circle fill="url(#zoe-orbit-packet-fill)" filter="url(#zoe-orbit-packet-glow)" opacity="0" r="5.5">
+                          <animateMotion begin="1.6s" calcMode="linear" dur="10.4s" keyPoints="0;1;1" keyTimes="0;.15;1" path="M 292 330 C 350 314, 410 314, 468 330" repeatCount="indefinite" />
+                          <animate attributeName="opacity" begin="1.6s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="0;1;1;0;0" />
+                          <animate attributeName="r" begin="1.6s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="2;5.5;5.5;2;2" />
+                        </circle>
+                        <circle fill="url(#zoe-orbit-packet-fill)" filter="url(#zoe-orbit-packet-glow)" opacity="0" r="5.5">
+                          <animateMotion begin="3.2s" calcMode="linear" dur="10.4s" keyPoints="0;1;1" keyTimes="0;.15;1" path="M 652 330 C 684 316, 706 316, 738 330" repeatCount="indefinite" />
+                          <animate attributeName="opacity" begin="3.2s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="0;1;1;0;0" />
+                          <animate attributeName="r" begin="3.2s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="2;5.5;5.5;2;2" />
+                        </circle>
+                        <circle fill="url(#zoe-orbit-packet-fill)" filter="url(#zoe-orbit-packet-glow)" opacity="0" r="5.5">
+                          <animateMotion begin="4.8s" calcMode="linear" dur="10.4s" keyPoints="0;1;1" keyTimes="0;.15;1" path="M 850 395 C 902 525, 810 640, 652 658" repeatCount="indefinite" />
+                          <animate attributeName="opacity" begin="4.8s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="0;1;1;0;0" />
+                          <animate attributeName="r" begin="4.8s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="2;5.5;5.5;2;2" />
+                        </circle>
+                        <circle fill="url(#zoe-orbit-packet-fill)" filter="url(#zoe-orbit-packet-glow)" opacity="0" r="5.5">
+                          <animateMotion begin="7.2s" calcMode="linear" dur="10.4s" keyPoints="0;1;1" keyTimes="0;.15;1" path="M 468 658 C 346 716, 214 696, 118 528" repeatCount="indefinite" />
+                          <animate attributeName="opacity" begin="7.2s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="0;1;1;0;0" />
+                          <animate attributeName="r" begin="7.2s" dur="10.4s" keyTimes="0;.02;.13;.15;1" repeatCount="indefinite" values="2;5.5;5.5;2;2" />
+                        </circle>
+                      </g>
+                    </svg>
+                    <div class="zoe-orbit-activity" aria-hidden="true">
+                      <i class="zoe-orbit-stage-pulse is-strategy"></i>
+                      <i class="zoe-orbit-stage-pulse is-search"></i>
+                      <i class="zoe-orbit-stage-pulse is-screening"></i>
+                      <i class="zoe-orbit-stage-pulse is-iteration"></i>
+                      <i class="zoe-orbit-ontology-pulse"></i>
+                      <i class="zoe-orbit-source-pulse"></i>
+                    </div>
+                    <div class="zoe-orbit-glow" aria-hidden="true"></div>
+                    <div class="zoe-orbit-loop zoe-orbit-loop-outer" aria-hidden="true"></div>
+                    <div class="zoe-orbit-loop zoe-orbit-loop-inner" aria-hidden="true"></div>
+
+                    <article class="zoe-keyword-pulse" aria-label="当前买家搜索任务">
+                      <strong>Solar Power System Man...</strong>
+                      <span><i></i><em>716</em> 累计找到客户</span>
+                      <b>通过率 <em>38.11</em></b>
+                    </article>
+
+                    <section class="zoe-source-orchestrator" aria-label="全网搜索编排状态">
+                      <div class="zoe-source-map" aria-hidden="true">
+                        <span class="zoe-source-core">ZOE<small>PUBLIC WEB</small></span>
+                        <span class="zoe-source-node source-one"><i data-lucide="search"></i><small>Yandex</small></span>
+                        <span class="zoe-source-node source-two"><img src="assets/Facebook.svg" alt="" /><small>Facebook</small></span>
+                        <span class="zoe-source-node source-three"><img src="assets/X.svg" alt="" /><small>X</small></span>
+                        <span class="zoe-source-node source-four"><i data-lucide="message-circle"></i><small>Twitter</small></span>
+                        <span class="zoe-source-node source-five"><img src="assets/LinkedIn.svg" alt="" /><small>LinkedIn</small></span>
+                        <span class="zoe-source-node source-six"><i data-lucide="search"></i><small>Google</small></span>
+                      </div>
+                      <article class="zoe-search-monitor">
+                        <header><i></i><strong>ZOE 全网规划搜索中</strong></header>
+                        <div><span class="zoe-search-brand"><i data-lucide="search"></i></span><b>Yandex</b></div>
+                        <p>已免费为您全网搜索发现</p>
+                        <strong><b>14,990</b> 条</strong>
+                      </article>
+                    </section>
+
+                    <article class="zoe-realtime-push" aria-label="实时线索推送">
+                      <header><strong>实时判断</strong><i></i></header>
+                      <div><span><i data-lucide="trash-2"></i></span><p><strong>SYSLINK TECH...</strong><small>印度　http://www.sysl...</small><b>产品信息不明确或不匹配，建议过滤</b></p><em>已解除</em></div>
+                      <small>本条不会进入客户池</small>
+                    </article>
+
+                    <section class="zoe-ontology-node" aria-label="企业本体持续提供业务理解">
+                      <span><i data-lucide="brain-circuit"></i></span>
+                      <small>ENTERPRISE ONTOLOGY</small>
+                      <strong>企业本体</strong>
+                      <p>持续学习并提供业务理解</p>
+                    </section>
+
+                    <ol class="zoe-stage-tabs zoe-orbit-stages" role="tablist" aria-label="获客链路阶段">
+                      <li><section class="zoe-stage-node"><button class="active" type="button" role="tab" aria-selected="true" data-zoe-stage="0"><i class="zoe-stage-card-icon" data-lucide="brain-circuit"></i><span>01 · STRATEGY</span><strong>买家开发策略</strong><small>自动运行中</small></button></section></li>
+                      <li><section class="zoe-stage-node"><button type="button" role="tab" aria-selected="false" data-zoe-stage="1"><i class="zoe-stage-card-icon" data-lucide="radar"></i><span>02 · SEARCH</span><strong>全网实时搜索</strong><small>自动运行中</small></button></section></li>
+                      <li><section class="zoe-stage-node"><button type="button" role="tab" aria-selected="false" data-zoe-stage="2"><i class="zoe-stage-card-icon" data-lucide="scan-search"></i><span>03 · SCREENING</span><strong>AI 高潜力买家筛选</strong><small>自动运行中</small></button></section></li>
+                      <li><section class="zoe-stage-node"><button type="button" role="tab" aria-selected="false" data-zoe-stage="3"><i class="zoe-stage-card-icon" data-lucide="refresh-cw"></i><span>04 · ITERATION</span><strong>自主策略迭代</strong><small>自动运行中</small></button></section></li>
+                    </ol>
+
+                    <article class="zoe-stage-detail" aria-live="polite" hidden>
+                      <div class="zoe-stage-icon" id="zoeStageIcon"><i data-lucide="waypoints"></i></div>
+                      <div class="zoe-stage-copy"><span id="zoeStageKicker">BUYER DEVELOPMENT STRATEGY</span><h3 id="zoeStageTitle">正在形成买家开发策略</h3><p id="zoeStageBody">结合企业产品、历史高质量客户与市场机会，生成本轮买家方向、搜索词和排除边界。</p><div class="zoe-stage-tags" id="zoeStageTags"><span>高端酒店采购</span><span>北美市场</span><span>商业照明升级</span></div></div>
+                      <div class="zoe-stage-outcome"><span>本轮结果</span><strong id="zoeStageMetric">3 个买家方向</strong><button type="button" data-zoe-open-stage>查看执行详情<i data-lucide="arrow-right"></i></button></div>
+                    </article>
+                  </div>
+                </section>
+
+              </div>
+
+              <aside class="zoe-agent-chat zoe-copilot av2-collab" id="zoeAgentChat" aria-label="Zoe Copilot">
+                <div class="zoe-chat-rail">
+                  <button type="button" data-zoe-chat-expand aria-label="展开 Zoe 协作侧栏"><i data-lucide="message-square-more"></i><span id="zoeChatRailBadge">1</span></button>
+                </div>
+                <section class="zoe-chat-shell">
+                  <header class="zoe-chat-header">
+                    <h2>与 Zoe 协作</h2>
+                    <button type="button" data-zoe-chat-collapse data-av2-close aria-label="收起 Zoe Copilot"><i data-lucide="panel-right-close"></i></button>
+                  </header>
+
+                  <div class="zoe-chat-context" hidden><span>当前上下文</span><button type="button" data-zoe-chat-card="task">北美高端酒店买家发现<i data-lucide="chevron-down"></i></button></div>
+
+                  <div class="zoe-chat-stream av2-stream" id="zoeChatStream" role="log" aria-live="polite" aria-relevant="additions text"></div>
+
+                  <nav class="zoe-chat-quick-actions" aria-label="快速查看业务卡片">
+                    <button type="button" data-zoe-chat-card="task"><i data-lucide="clipboard-list"></i><span>查看任务</span></button>
+                    <button type="button" data-zoe-chat-card="review"><i data-lucide="clipboard-list"></i><span>客户画像</span><b id="zoeReviewCount" hidden>4</b></button>
+                    <button type="button" data-zoe-chat-card="strategy"><i data-lucide="clipboard-list"></i><span>策略画像</span><b id="zoeStrategyCount" hidden>2</b></button>
+                    <img src="assets/zoe-copilot-mascot.png" alt="" />
+                  </nav>
+                  <form class="zoe-chat-composer" id="zoeChatComposer">
+                    <div class="av2-prompt-box"><label for="zoeChatInput">和 Zoe 说点什么</label><input id="zoeChatInput" type="text" autocomplete="off" placeholder="例如：我要开发英国的客户" /><footer><button type="submit" aria-label="发送消息" aria-disabled="true" disabled><span>发送</span><i data-lucide="send"></i></button></footer></div>
+                  </form>
+                </section>
+              </aside>
+              <button class="zoe-chat-mobile-trigger" type="button" data-zoe-chat-mobile-toggle aria-controls="zoeAgentChat" aria-expanded="false"><i data-lucide="message-square-more"></i><span>与 Zoe 协作</span><b id="zoeChatMobileBadge">1</b></button>
+            </div>
+          </div>
+
+          <div class="zoe-create" data-zoe-screen="create" hidden>
+            <header class="zoe-create-header">
+              <button type="button" data-zoe-create-back><i data-lucide="arrow-left"></i>返回获客总览</button>
+              <div><span>创建获客任务</span><h1>确认 5 个关键选择，其余交给 Zoe</h1><p>企业信息和历史经验已自动带入，你不需要从空白开始配置。</p></div>
+              <span class="zoe-create-status"><i></i>企业本体已同步</span>
+            </header>
+
+            <div class="zoe-create-layout">
+              <aside class="zoe-create-steps" aria-label="创建任务进度">
+                <ol>
+                  <li class="active" data-zoe-create-marker="0"><span>1</span><div><strong>这次推动什么</strong><small>选择业务方向</small></div></li>
+                  <li data-zoe-create-marker="1"><span>2</span><div><strong>想卖给谁</strong><small>确认买家画像</small></div></li>
+                  <li data-zoe-create-marker="2"><span>3</span><div><strong>先去哪里找</strong><small>安排优先市场</small></div></li>
+                  <li data-zoe-create-marker="3"><span>4</span><div><strong>何时请你判断</strong><small>约定接手边界</small></div></li>
+                  <li data-zoe-create-marker="4"><span>5</span><div><strong>发现后怎么做</strong><small>启动自动任务</small></div></li>
+                </ol>
+                <p><i data-lucide="timer"></i><span><strong>预计 2 分钟完成</strong><small>每一步都有 Zoe 推荐</small></span></p>
+              </aside>
+
+              <section class="zoe-create-main">
+                <article class="zoe-create-card" id="zoeCreateCard">
+                  <div class="zoe-create-agent"><span>Z</span><div><small>Zoe 已结合企业本体推荐</small><h2 id="zoeCreateQuestion">这次最想优先推动哪一类业务？</h2><p id="zoeCreateDescription">建议先从历史询盘质量最高、交付能力最成熟的方向开始。</p></div></div>
+                  <div class="zoe-create-options" id="zoeCreateOptions" role="radiogroup" aria-label="选择业务方向"></div>
+                  <footer><button type="button" data-zoe-create-previous disabled><i data-lucide="arrow-left"></i>上一步</button><span id="zoeCreateProgressText">第 1 步，共 5 步</span><button class="primary" type="button" data-zoe-create-next>确认这个方向<i data-lucide="arrow-right"></i></button></footer>
+                </article>
+
+                <section class="zoe-create-success" id="zoeCreateSuccess" hidden>
+                  <span><i data-lucide="circle-check-big"></i></span>
+                  <small>任务已启动</small>
+                  <h2>北美高端酒店买家发现</h2>
+                  <p>Zoe 已开始规划搜索词并扫描公开商业信号，结果会持续进入客户池。</p>
+                  <div><button class="zoe-primary-action" type="button" data-zoe-success-overview>查看任务进度</button><a class="zoe-secondary-action" href="#customers">前往客户池</a></div>
+                </section>
+              </section>
+
+              <aside class="zoe-create-summary" aria-labelledby="zoe-create-summary-title">
+                <span>任务预览</span>
+                <h2 id="zoe-create-summary-title">买家开发策略</h2>
+                <dl>
+                  <div><dt>业务方向</dt><dd id="zoeSummaryBusiness">商用照明整体方案</dd></div>
+                  <div><dt>买家画像</dt><dd id="zoeSummaryPersona">高端酒店业主与采购团队</dd></div>
+                  <div><dt>优先市场</dt><dd id="zoeSummaryMarket">美国与加拿大</dd></div>
+                  <div><dt>人工判断</dt><dd id="zoeSummaryBoundary">仅边界模糊时</dd></div>
+                  <div><dt>发现后动作</dt><dd id="zoeSummaryAction">进入客户池并通知</dd></div>
+                </dl>
+                <div class="zoe-create-pulse"><i data-lucide="sparkles"></i><p><strong>Zoe 正在形成策略</strong><span id="zoeCreateAssistantText">已带入企业认知和历史高质量客户特征</span></p></div>
+              </aside>
+            </div>
+          </div>
+
+          <section class="zoe-stage-dialog" id="zoeStageDialog" role="dialog" aria-modal="true" aria-labelledby="zoe-stage-dialog-title" aria-hidden="true" hidden>
+            <button class="zoe-dialog-backdrop" type="button" data-zoe-close-stage aria-label="关闭执行详情"></button>
+            <article class="zoe-dialog-panel" tabindex="-1">
+              <header><div><span id="zoeStageDialogKicker">BUYER DEVELOPMENT STRATEGY</span><h2 id="zoe-stage-dialog-title">买家开发策略详情</h2><p id="zoeStageDialogIntro">本轮策略如何形成，以及哪些判断已被自动带入。</p></div><button type="button" data-zoe-close-stage aria-label="关闭执行详情"><i data-lucide="x"></i></button></header>
+              <div class="zoe-dialog-content" id="zoeStageDialogContent"></div>
+              <footer><span><i></i>Zoe 将持续按当前策略运行</span><button type="button" data-zoe-close-stage>完成</button></footer>
+            </article>
+          </section>
+        </section>
+
+        <section class="agent-page leo-page leo-exhibition-page" id="leoPage" aria-labelledby="leo-title" hidden>
+          <article class="agent-flow-card zoe-flow-card">
+            <header>
+              <span></span>
+              <h1 id="leo-title">展会营销获客</h1>
+              <div>
+                <button type="button" data-zoe-reset aria-label="重新开始展会营销流程"><i data-lucide="rotate-cw"></i></button>
+              </div>
+            </header>
+
+            <div class="zoe-flow-body">
+              <nav class="zoe-step-nav" aria-label="展会营销创建步骤">
+                <ol>
+                  <li class="active" data-zoe-nav-step="0"><button type="button">搜索展会</button></li>
+                  <li data-zoe-nav-step="1"><button type="button">展会信息</button></li>
+                  <li data-zoe-nav-step="2"><button type="button">客户画像</button></li>
+                  <li data-zoe-nav-step="3"><button type="button">营销国家</button></li>
+                  <li data-zoe-nav-step="5"><button type="button">营销模板</button></li>
+                  <li data-zoe-nav-step="6"><button type="button">下达任务</button></li>
+                </ol>
+              </nav>
+
+              <div class="zoe-conversation" aria-live="polite">
+                <section class="zoe-flow-step" data-zoe-step="0">
+                  <p class="zoe-question">请告诉我你准备参加的展会名称</p>
+                  <article class="zoe-answer-card">
+                    <label class="zoe-field">
+                      <span>展会名称</span>
+                      <input id="zoeExhibitionSearch" type="text" value="拉斯维加斯消费电子展 CES 2027" autocomplete="off" />
+                    </label>
+                    <div class="zoe-card-actions">
+                      <span class="zoe-confirmed-label"><i data-lucide="circle-check-big"></i>已确认</span>
+                      <button class="zoe-edit-button" type="button" data-zoe-edit="0"><i data-lucide="pencil"></i>修改</button>
+                      <button class="zoe-primary-button" type="button" data-zoe-confirm="0">确认展会</button>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="zoe-flow-step" data-zoe-step="1" hidden>
+                  <p class="zoe-question">我找到了匹配度最高的展会，请确认信息</p>
+                  <article class="zoe-answer-card">
+                    <div class="zoe-card-heading">
+                      <div><span class="zoe-kicker">Leo 已完成检索</span><h2>展会基础信息</h2></div>
+                      <span class="zoe-match-badge">匹配度 98%</span>
+                    </div>
+                    <div class="zoe-field-grid">
+                      <label class="zoe-field zoe-field-wide"><span>展会名称</span><input id="zoeExhibitionName" value="CES 2027 · 拉斯维加斯消费电子展" /></label>
+                      <label class="zoe-field"><span>展会国家</span><input value="美国" /></label>
+                      <label class="zoe-field"><span>展会城市</span><input value="拉斯维加斯" /></label>
+                      <label class="zoe-field"><span>开始日期</span><input type="date" value="2027-01-06" /></label>
+                      <label class="zoe-field"><span>结束日期</span><input type="date" value="2027-01-09" /></label>
+                      <label class="zoe-field zoe-field-wide"><span>官网</span><input value="https://www.ces.tech" /></label>
+                      <label class="zoe-field zoe-field-wide"><span>展会简介</span><textarea rows="3">全球最具影响力的科技盛会之一，聚集消费电子、AI、智能家居与创新技术领域的决策者和合作伙伴。</textarea></label>
+                    </div>
+                    <div class="zoe-card-actions">
+                      <span class="zoe-confirmed-label"><i data-lucide="circle-check-big"></i>已确认</span>
+                      <button class="zoe-edit-button" type="button" data-zoe-edit="1"><i data-lucide="pencil"></i>修改</button>
+                      <button class="zoe-primary-button" type="button" data-zoe-confirm="1">确认信息</button>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="zoe-flow-step" data-zoe-step="2" hidden>
+                  <p class="zoe-question">结合你的产品与参展目标，我整理了优先客户画像</p>
+                  <article class="zoe-answer-card">
+                    <div class="zoe-card-heading">
+                      <div><span class="zoe-kicker">推荐画像</span><h2>本次展会重点客户</h2></div>
+                      <button class="zoe-ghost-button" type="button" data-add-tag="profiles"><i data-lucide="plus"></i>添加画像</button>
+                    </div>
+                    <div class="zoe-chip-list" id="zoeProfileTags" data-tag-list="profiles">
+                      <span class="zoe-chip">消费电子品牌商<button type="button" aria-label="移除消费电子品牌商"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip">智能家居集成商<button type="button" aria-label="移除智能家居集成商"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip">渠道分销商<button type="button" aria-label="移除渠道分销商"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip">零售采购负责人<button type="button" aria-label="移除零售采购负责人"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip">产品与创新负责人<button type="button" aria-label="移除产品与创新负责人"><i data-lucide="x"></i></button></span>
+                    </div>
+                    <label class="zoe-field zoe-field-spaced"><span>补充画像要求</span><textarea rows="2" placeholder="例如：优先寻找正在扩展北美渠道的企业">优先匹配近 12 个月有新品发布、渠道扩张或供应商更换信号的企业</textarea></label>
+                    <div class="zoe-card-actions">
+                      <span class="zoe-confirmed-label"><i data-lucide="circle-check-big"></i>已确认</span>
+                      <button class="zoe-edit-button" type="button" data-zoe-edit="2"><i data-lucide="pencil"></i>修改</button>
+                      <button class="zoe-primary-button" type="button" data-zoe-confirm="2">确认客户画像</button>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="zoe-flow-step" data-zoe-step="3" hidden>
+                  <p class="zoe-question">建议优先覆盖以下国家和地区，你可以随时调整</p>
+                  <article class="zoe-answer-card">
+                    <div class="zoe-card-heading">
+                      <div><span class="zoe-kicker">营销范围</span><h2>目标国家与客户规模</h2></div>
+                      <button class="zoe-ghost-button" type="button" data-add-tag="countries"><i data-lucide="plus"></i>添加国家</button>
+                    </div>
+                    <div class="zoe-chip-list" id="zoeCountryTags" data-tag-list="countries">
+                      <span class="zoe-chip zoe-chip-country">美国<button type="button" aria-label="移除美国"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip zoe-chip-country">加拿大<button type="button" aria-label="移除加拿大"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip zoe-chip-country">墨西哥<button type="button" aria-label="移除墨西哥"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip zoe-chip-country">德国<button type="button" aria-label="移除德国"><i data-lucide="x"></i></button></span>
+                      <span class="zoe-chip zoe-chip-country">英国<button type="button" aria-label="移除英国"><i data-lucide="x"></i></button></span>
+                    </div>
+                    <div class="zoe-field-grid zoe-field-grid-compact">
+                      <label class="zoe-field"><span>计划覆盖客户</span><input id="zoeTargetCount" type="number" min="50" max="3000" step="50" value="800" /></label>
+                      <label class="zoe-field"><span>优先级</span><select><option>高匹配客户优先</option><option>新客户优先</option><option>均匀分配</option></select></label>
+                    </div>
+                    <div class="zoe-card-actions">
+                      <span class="zoe-confirmed-label"><i data-lucide="circle-check-big"></i>已确认</span>
+                      <button class="zoe-edit-button" type="button" data-zoe-edit="3"><i data-lucide="pencil"></i>修改</button>
+                      <button class="zoe-primary-button" type="button" data-zoe-confirm="3">确认营销国家</button>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="zoe-flow-step" data-zoe-step="4" hidden>
+                  <p class="zoe-question">为补足目标客户数量，请选择 Leo 的获客方式</p>
+                  <article class="zoe-answer-card">
+                    <div class="zoe-card-heading"><div><span class="zoe-kicker">获客策略</span><h2>补足潜在客户</h2></div></div>
+                    <div class="zoe-choice-grid" role="radiogroup" aria-label="选择获客方式">
+                      <button class="active" type="button" role="radio" aria-checked="true" data-zoe-source="auto"><i data-lucide="sparkles"></i><strong>Leo 自动拓客</strong><span>从全网寻找符合画像的新客户</span></button>
+                      <button type="button" role="radio" aria-checked="false" data-zoe-source="import"><i data-lucide="file-up"></i><strong>导入名单</strong><span>上传 Excel / CSV 客户名单</span></button>
+                    </div>
+                    <label class="zoe-upload" id="zoeImportField" hidden>
+                      <i data-lucide="upload-cloud"></i>
+                      <strong>拖拽或点击上传客户文件</strong>
+                      <span>支持 .xlsx、.xls、.csv，单个文件不超过 15MB</span>
+                      <input type="file" accept=".xlsx,.xls,.csv" />
+                    </label>
+                    <fieldset class="zoe-channel-fieldset">
+                      <legend>自动触达方式</legend>
+                      <label><input type="checkbox" checked /><span><i data-lucide="mail"></i>邮件</span></label>
+                      <label><input type="checkbox" checked /><span><img src="assets/LinkedIn.svg" alt="" />LinkedIn</span></label>
+                      <label><input type="checkbox" /><span><i data-lucide="phone"></i>电话任务</span></label>
+                    </fieldset>
+                    <div class="zoe-card-actions">
+                      <span class="zoe-confirmed-label"><i data-lucide="circle-check-big"></i>已确认</span>
+                      <button class="zoe-edit-button" type="button" data-zoe-edit="4"><i data-lucide="pencil"></i>修改</button>
+                      <button class="zoe-primary-button" type="button" data-zoe-confirm="4"><i data-lucide="wand-sparkles"></i>生成营销模板</button>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="zoe-flow-step" data-zoe-step="5" hidden>
+                  <p class="zoe-question">营销模板已生成。确认内容后，我会自动配置发送任务</p>
+                  <article class="zoe-answer-card zoe-template-card">
+                    <div class="zoe-card-heading">
+                      <div><span class="zoe-kicker">AI 营销模板</span><h2>CES 2027 展前邀约 · 首封邮件</h2></div>
+                      <button class="zoe-ghost-button" type="button" data-zoe-regenerate><i data-lucide="rotate-cw"></i>重新生成</button>
+                    </div>
+                    <label class="zoe-field"><span>邮件主题</span><input id="zoeTemplateSubject" value="CES 2027 | 预约 15 分钟，交流智能硬件渠道合作机会" /></label>
+                    <label class="zoe-field zoe-field-spaced"><span>邮件正文</span><textarea id="zoeTemplateBody" rows="10">Hi {{firstName}},
+
+I’m John from OntoZ. We’ll be attending CES 2027 in Las Vegas and would love to connect with teams expanding their smart hardware portfolio in North America.
+
+Based on {{companyName}}’s recent product and channel activity, I believe there may be a strong fit with our supply and go-to-market capabilities.
+
+Would you be open to a 15-minute conversation during the show? I’m happy to work around your schedule.
+
+Best,
+John</textarea></label>
+                    <div class="zoe-card-actions">
+                      <span class="zoe-confirmed-label"><i data-lucide="circle-check-big"></i>已确认</span>
+                      <button class="zoe-edit-button" type="button" data-zoe-edit="5"><i data-lucide="pencil"></i>修改</button>
+                      <button class="zoe-primary-button" type="button" data-zoe-confirm="5">确认营销模板</button>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="zoe-flow-step" data-zoe-step="6" hidden>
+                  <p class="zoe-question">最后确认发送账号与任务范围</p>
+                  <article class="zoe-answer-card zoe-task-card">
+                    <div class="zoe-field-grid zoe-field-grid-compact">
+                      <label class="zoe-field"><span>发件邮箱</span><select id="zoeSender"><option>john@ontoz.ai</option><option>sales@ontoz.ai</option></select></label>
+                      <label class="zoe-field"><span>开始时间</span><input type="datetime-local" value="2026-11-16T09:30" /></label>
+                    </div>
+                    <section class="zoe-task-summary" aria-labelledby="zoe-task-summary-title">
+                      <div class="zoe-card-heading"><div><span class="zoe-kicker">任务预览</span><h2 id="zoe-task-summary-title">CES 2027 展会营销任务</h2></div><span class="zoe-status-badge">待下达</span></div>
+                      <dl>
+                        <div><dt>展会</dt><dd>CES 2027 · 拉斯维加斯</dd></div>
+                        <div><dt>营销国家</dt><dd id="zoeSummaryCountries">美国、加拿大、墨西哥等 5 个国家</dd></div>
+                        <div><dt>预计覆盖</dt><dd><strong id="zoeSummaryCount">800</strong> 家公司</dd></div>
+                      </dl>
+                      <div class="zoe-volume-grid">
+                        <div><span>客户池已有</span><strong>200</strong></div>
+                        <div><span>本次导入</span><strong>0</strong></div>
+                        <div><span>Leo 新拓</span><strong id="zoeNewCount">600</strong></div>
+                      </div>
+                    </section>
+                    <button class="zoe-launch-button" type="button" data-zoe-launch><i data-lucide="send"></i>确认并下达任务</button>
+                  </article>
+                </section>
+
+                <section class="zoe-success-card" id="zoeSuccessCard" hidden>
+                  <img src="assets/zoe-assistant-avatar.png" alt="Leo AI 助理" />
+                  <i data-lucide="circle-check-big" aria-hidden="true"></i>
+                  <h2>展会营销任务已下达</h2>
+                  <p>Leo 将持续拓展并筛选客户，营销进展会同步到客户池与任务管理。</p>
+                  <div><a href="#lily/tasks">查看任务进度</a><button type="button" data-zoe-continue>继续创建任务</button></div>
+                </section>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"><i data-lucide="circle-check" aria-hidden="true"></i><span></span></div>
+    <template id="lucasSiteDocument"><!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Lucas · Demo Website</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="css/lucas-site.css?v=c76a575d4b"><link rel="stylesheet" href="preview-only.css?v=c76a575d4b"></head><body><div id="siteRoot"></div><script src="js/lucas-browser.js?v=c76a575d4b"></script><script src="js/lucas-site.js?v=c76a575d4b"></script><script src="preview-only.js?v=c76a575d4b"></script></body></html></template>
+    <script src="assets/lucide.min.js?v=c76a575d4b"></script>
+    <script src="js/data.js?v=c76a575d4b"></script>
+    <script src="js/shared.js?v=c76a575d4b"></script>
+    <script src="js/inquiry-data.js?v=c76a575d4b"></script>
+    <script src="js/lily.js?v=c76a575d4b"></script>
+    <script src="js/route.js?v=c76a575d4b"></script>
+    <script src="js/ontology.js?v=c76a575d4b"></script>
+    <script src="js/ontology-strategy.js?v=c76a575d4b"></script>
+    <script src="js/keyword-validation.js?v=c76a575d4b"></script>
+    <script src="js/zoe.js?v=c76a575d4b"></script>
+    <script src="js/leo.js?v=c76a575d4b"></script>
+    <script src="assets/gsap.min.js?v=c76a575d4b"></script>
+    <script src="js/agent-home-layout.js?v=c76a575d4b"></script>
+    <script src="js/wendy.js?v=c76a575d4b"></script>
+    <script src="js/john-data.js?v=c76a575d4b"></script>
+    <script src="js/john.js?v=c76a575d4b"></script>
+    <script src="js/lucas-browser.js?v=c76a575d4b"></script>
+    <script src="js/lucas-site.js?v=c76a575d4b"></script>
+    <script src="js/lucas-reference.js?v=c76a575d4b"></script>
+    <script src="js/lucas-flow.js?v=c76a575d4b"></script>
+    <script src="js/lucas-carousel.js?v=c76a575d4b"></script>
+    <script src="js/lucas-benchmark.js?v=c76a575d4b"></script>
+    <script src="js/lucas.js?v=c76a575d4b"></script>
+    <script src="js/main.js?v=c76a575d4b"></script>
+  <script src="preview-only.js?v=c76a575d4b"></script></body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" role="img" aria-label="七天观察、John 分析与单轮优化组成的循环漏斗">
+            <defs>
+              <clipPath id="john-funnel-clip"><path d="M34 42 C270 42 448 61 620 91 C770 117 866 130 926 136 L926 216 C866 221 770 234 620 260 C448 290 270 309 34 309 Z" /></clipPath>
+              <linearGradient id="john-funnel-observe" x1="0" x2="1"><stop offset="0%" stop-color="#dcd6ff" stop-opacity=".96" /><stop offset="100%" stop-color="#d2ddff" stop-opacity=".78" /></linearGradient>
+              <linearGradient id="john-funnel-handoff" x1="0" x2="1"><stop offset="0%" stop-color="#cfe3ff" stop-opacity=".8" /><stop offset="100%" stop-color="#c7efef" stop-opacity=".84" /></linearGradient>
+              <linearGradient id="john-funnel-analyse" x1="0" x2="1"><stop offset="0%" stop-color="#c5efeb" stop-opacity=".84" /><stop offset="100%" stop-color="#cff2dd" stop-opacity=".88" /></linearGradient>
+              <linearGradient id="john-funnel-optimize" x1="0" x2="1"><stop offset="0%" stop-color="#d7f3d3" stop-opacity=".88" /><stop offset="100%" stop-color="#e6f5c8" stop-opacity=".92" /></linearGradient>
+              <filter id="john-funnel-glass-shadow" x="-20%" y="-35%" width="140%" height="190%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#6770a5" flood-opacity=".14" /></filter>
+              <filter id="john-funnel-particle-glow" x="-400%" y="-400%" width="800%" height="800%"><feGaussianBlur stdDeviation="3.2" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+              <marker id="john-funnel-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#7562d8" /></marker>
+            <style>text{font-family:Inter,"PingFang SC",sans-serif;fill:#374151}.funnel-stage-index{font-size:13px;fill:#737373}.funnel-stage-label{font-size:17px;font-weight:600}.funnel-stage-value{font-size:23px;font-weight:600;fill:#4f46e5}.funnel-stage-value.compact{font-size:22px}.funnel-stage-note{font-size:12px}.workflow-cycle-path{fill:none;stroke:#7562d8;stroke-width:1.5;stroke-dasharray:6 6}.workflow-cycle-label{font-size:14px;fill:#7562d8}</style></defs>
+
+            <g class="workflow-funnel-shell" filter="url(#john-funnel-glass-shadow)">
+              <g clip-path="url(#john-funnel-clip)">
+                <rect x="34" y="38" width="254" height="275" fill="url(#john-funnel-observe)" />
+                <rect x="288" y="38" width="226" height="275" fill="url(#john-funnel-handoff)" />
+                <rect x="514" y="38" width="214" height="275" fill="url(#john-funnel-analyse)" />
+                <rect x="728" y="38" width="200" height="275" fill="url(#john-funnel-optimize)" />
+                <g filter="url(#john-funnel-particle-glow)">
+                  <circle class="funnel-particle" cx="90" cy="157" r="4.8" fill="#ffffff" opacity=".7" />
+                  <circle class="funnel-particle" cx="116" cy="181" r="3.2" fill="#9385f3" opacity=".72" />
+                  <circle class="funnel-particle" cx="62" cy="170" r="5.8" fill="#ffffff" opacity=".64" />
+                  <circle class="funnel-particle" cx="142" cy="164" r="3.8" fill="#65d8d4" opacity=".76" />
+                  <circle class="funnel-particle" cx="38" cy="187" r="2.8" fill="#ffffff" opacity=".66" />
+                  <circle class="funnel-particle" cx="174" cy="174" r="4.2" fill="#73d9ae" opacity=".68" />
+                </g>
+              </g>
+              <path d="M34 42 C270 42 448 61 620 91 C770 117 866 130 926 136" fill="none" stroke="rgba(116,101,204,.22)" stroke-width="1" />
+              <path d="M34 309 C270 309 448 290 620 260 C770 234 866 221 926 216" fill="none" stroke="rgba(50,166,153,.2)" stroke-width="1" />
+              <path d="M288 48 C286 121 286 234 288 303" fill="none" stroke="rgba(255,255,255,.72)" stroke-width="2" />
+              <path d="M514 73 C512 127 512 226 514 277" fill="none" stroke="rgba(255,255,255,.72)" stroke-width="2" />
+              <path d="M728 109 C726 145 726 204 728 241" fill="none" stroke="rgba(255,255,255,.72)" stroke-width="2" />
+            </g>
+
+            <g class="workflow-funnel-stage stage-observe"><text x="72" y="101" class="funnel-stage-index">01</text><text x="72" y="128" class="funnel-stage-label">程序观察 7 天</text><text x="72" y="171" class="funnel-stage-value">第 4 / 7 天</text><text x="72" y="199" class="funnel-stage-note">持续检查数据，记录异常</text><text x="72" y="217" class="funnel-stage-note">同时积累完整周期数据</text></g>
+            <g class="workflow-funnel-stage stage-handoff"><text x="324" y="116" class="funnel-stage-index">02</text><text x="324" y="143" class="funnel-stage-label">周期数据交接</text><text x="324" y="180" class="funnel-stage-value compact">问题 + 数据</text><text x="324" y="207" class="funnel-stage-note">第 7 天统一提交给 John</text></g>
+            <g class="workflow-funnel-stage stage-analyse"><text x="550" y="132" class="funnel-stage-index">03</text><text x="550" y="159" class="funnel-stage-label">John 分析原因</text><text x="550" y="194" class="funnel-stage-value compact">定位问题</text><text x="550" y="220" class="funnel-stage-note">结合记录与周期数据判断</text></g>
+            <g class="workflow-funnel-stage stage-optimize"><text x="758" y="148" class="funnel-stage-index">04</text><text x="758" y="175" class="funnel-stage-label">执行一轮优化</text><text x="758" y="207" class="funnel-stage-value compact">统一调整</text><text x="758" y="233" class="funnel-stage-note">完成后进入下一周期</text></g>
+
+
+
+            <path class="workflow-cycle-path" d="M876 276 C842 358 196 375 84 319" marker-end="url(#john-funnel-arrow)" />
+            <text x="480" y="367" text-anchor="middle" class="workflow-cycle-label">优化完成后，进入下一轮 7 天观察期</text>
+          </svg>

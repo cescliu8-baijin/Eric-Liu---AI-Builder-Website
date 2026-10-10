@@ -1,0 +1,8 @@
+.collapse-button svg,
+.nav-item svg,
+.account-chevron {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  stroke-width: 1.5;
+}

@@ -1,0 +1,53 @@
+/* AI Workflow extends the portfolio's orange, paper and ink visual system. */
+.workflow-page .meta{font-size:12px}
+.workflow-intro{padding-bottom:0}
+.workflow-eyebrow{display:flex;justify-content:space-between;gap:20px}
+.workflow-intro .page-title{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:46px 0 38px;font-size:clamp(64px,10.5vw,164px)}
+.workflow-star{font-family:Georgia,serif;font-size:1.15em;font-weight:400;line-height:.7;flex-shrink:0}
+.workflow-intro-copy{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-bottom:52px}
+.workflow-intro-copy h2{font-size:clamp(24px,2.7vw,40px);line-height:1.5;letter-spacing:-.035em;font-weight:500}
+.workflow-intro-copy>p{font-size:16px;max-width:460px;line-height:1.9}
+.workflow-index{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.workflow-index a{display:flex;flex-direction:column;gap:16px;padding:23px 16px 28px 0;border:0;line-height:1.5;font-size:16px}
+.workflow-index a+a{border-left:1px solid #20201e50;padding-left:20px}
+.workflow-index a:hover{background:#20201e0a}
+.workflow-index a .meta{font-size:11px;min-height:34px}
+.workflow-index a:focus-visible{outline-offset:-5px}
+.workflow-notice{display:flex;gap:35px;align-items:center;padding:24px var(--pad);border-bottom:1px solid var(--line)}
+.workflow-notice .meta{white-space:nowrap;color:#716b5f}
+.workflow-notice p{font-size:14px;color:#5b5b55}
+.workflow-chapter{padding-top:32px;padding-bottom:76px;scroll-margin-top:16px}
+.workflow-chapter .section-label>span:last-child{color:#716b5f}
+.workflow-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(44px,9vw,160px);padding-top:46px}
+.workflow-heading{align-self:start;position:sticky;top:110px}
+.workflow-number{display:block;color:#b1391d;font-family:Georgia,serif;font-size:clamp(66px,7vw,106px);line-height:1;font-style:italic;letter-spacing:-.065em;margin-bottom:25px}
+.workflow-heading h2{font-size:clamp(28px,3.2vw,48px);line-height:1.35;letter-spacing:-.045em;font-weight:500}
+.workflow-lead{font-size:20px;line-height:1.65;margin:26px 0 14px;max-width:410px}
+.workflow-description{font-size:16px;color:#5b5b55;line-height:1.9;max-width:420px}
+.workflow-output{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;max-width:420px}
+.workflow-output .meta{color:#716b5f}
+.workflow-output p{font-size:14px;margin-top:9px}
+.workflow-content h3{font-size:16px;font-weight:500;line-height:1.6}
+.workflow-scenario{padding-bottom:27px;border-bottom:1px solid var(--line)}
+.workflow-scenario p{font-size:16px;line-height:1.85;color:#5b5b55;margin-top:10px}
+.workflow-method-title{margin-top:27px}
+.workflow-steps{margin:0;padding:0;list-style:none}
+.workflow-steps li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:16px;padding-top:24px}
+.workflow-steps li>.meta{padding-top:3px;color:#a93317}
+.workflow-steps h4{font-size:17px;line-height:1.5;font-weight:500;margin:0 0 7px}
+.workflow-steps p{font-size:16px;line-height:1.85;color:#5b5b55}
+.workflow-lesson{margin:30px 0;background:#e9e4d8;border-left:3px solid var(--orange);padding:22px 24px}
+.workflow-lesson>.meta{color:#a93317}
+.workflow-lesson p{font-size:16px;line-height:1.85;margin-top:10px}
+.workflow-case{border-bottom:1px solid var(--line)}
+.workflow-case summary{font-size:14px;padding:18px 0;gap:20px;align-items:center}
+.workflow-status{font-size:12px;color:#716b5f;margin-left:12px}
+.workflow-case-body{padding:8px 0 25px}
+.workflow-case-body>.meta{color:#716b5f}
+.workflow-case-body h3{font-size:18px;margin:12px 0}
+.workflow-case-body p{font-size:14px;color:#5b5b55;line-height:1.9}
+.workflow-case-body .workflow-case-note{font-size:12px;margin-top:18px}
+.workflow-page footer{border-top:1px solid var(--line)}
+@media(min-width:1700px){.workflow-layout{gap:150px}}
+@media(max-width:1000px){.workflow-index{grid-template-columns:repeat(3,minmax(0,1fr))}.workflow-index a:nth-child(4){border-left:0;padding-left:0}.workflow-index a:nth-child(n+4){border-top:1px solid #20201e50}.workflow-index a .meta{min-height:0}.workflow-layout{gap:44px}.workflow-intro-copy{gap:40px}}
+@media(max-width:760px){.workflow-page .meta{font-size:11px}.workflow-eyebrow>span:last-child{display:none}.workflow-intro .page-title{font-size:clamp(44px,10.6vw,80px);margin:36px 0 30px;gap:12px}.workflow-intro-copy{grid-template-columns:1fr;gap:22px;margin-bottom:30px}.workflow-intro-copy h2{font-size:26px}.workflow-intro-copy>p{font-size:15px;max-width:none}.workflow-index{grid-template-columns:repeat(2,minmax(0,1fr))}.workflow-index a{font-size:14px;gap:10px;padding:18px 12px 20px 0}.workflow-index a+a{padding-left:14px}.workflow-index a:nth-child(odd){border-left:0;padding-left:0}.workflow-index a:nth-child(even){border-left:1px solid #20201e50;padding-left:14px}.workflow-index a:nth-child(n+3){border-top:1px solid #20201e50}.workflow-index a:last-child{grid-column:1/-1}.workflow-index a .meta{font-size:10px}.workflow-notice{display:block;padding-top:20px;padding-bottom:20px}.workflow-notice p{margin-top:8px;font-size:13px}.workflow-chapter{padding-top:24px;padding-bottom:48px;scroll-margin-top:12px}.workflow-layout{grid-template-columns:1fr;gap:32px;padding-top:30px}.workflow-heading{position:static}.workflow-number{font-size:64px;margin-bottom:20px}.workflow-heading h2{font-size:32px}.workflow-lead{margin-top:20px;font-size:19px}.workflow-description{max-width:none}.workflow-output{max-width:none;margin-top:24px}.workflow-steps li{gap:10px;grid-template-columns:24px minmax(0,1fr)}.workflow-lesson{padding:20px}.workflow-case summary{min-height:56px}.workflow-page footer{font-size:10px}}

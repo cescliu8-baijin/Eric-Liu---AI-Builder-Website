@@ -1,0 +1,30 @@
+/* About: shared portfolio palette, with readable long-form experience. */
+.about-page .meta{font-size:12px}
+.about-page .page-title{font-size:clamp(40px,9vw,146px);line-height:1.02}
+.about-page .page-title>span{white-space:normal}
+.about-page .page-intro>p{font-size:18px;max-width:620px}
+.about-page .about-grid{grid-template-columns:minmax(0,1fr);max-width:960px}
+.about-bio{margin:28px 0 36px;color:#5b5b55;font-size:16px}
+.about-bio p{line-height:1.95}.about-bio p+p{margin-top:18px}
+.about-page .about-details>div{grid-template-columns:110px minmax(0,1fr);padding:15px 0}
+.about-page .about-details dt{font-size:12px;padding-top:3px}.about-page .about-details dd{font-size:14px}
+.about-section-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin:54px 0 44px}
+.about-section-heading h2{font-size:clamp(30px,4vw,58px);line-height:1.3;letter-spacing:-.04em}
+.about-section-heading>p{max-width:360px;font-size:16px;color:#5b5b55}
+.about-strengths{background:var(--ink);color:var(--paper)}
+.about-strengths .section-label{border-color:#77766e}.about-strengths .about-section-heading>p{color:#cecbc3}
+.strength-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #77766e}
+.strength-list article{padding:28px 30px 0 0;min-width:0}.strength-list article+article{border-left:1px solid #77766e;padding-left:30px}
+.strength-index{color:#ff8a6e}.strength-list h3{font-size:clamp(23px,2.3vw,34px);line-height:1.5;font-weight:500;letter-spacing:-.03em;margin:32px 0 22px}
+.strength-list p{font-size:16px;line-height:1.95;color:#e2ded5}.strength-list .strength-detail{margin-top:20px;color:#bfbcb4}
+.experience-list{list-style:none;margin:0;padding:0}
+.experience-entry{display:grid;grid-template-columns:minmax(190px,.55fr) minmax(0,1.45fr);gap:clamp(30px,5vw,80px);border-top:1px solid var(--line);padding:38px 0 48px}
+.experience-entry:first-child{border-color:var(--ink)}.experience-entry:last-child{padding-bottom:0}
+.experience-period{display:flex;flex-direction:column;align-items:flex-start;gap:15px;font-family:"Courier New",monospace;font-size:15px;line-height:1.7;padding-top:5px}
+.current-role{font-size:12px;letter-spacing:.08em;color:#a93317;display:flex;align-items:center;gap:8px}.current-role:before{content:"";width:6px;height:6px;background:currentColor;border-radius:50%}
+.experience-entry h3{font-size:clamp(24px,2.3vw,34px);line-height:1.45;font-weight:500;letter-spacing:-.03em}
+.experience-role{font-size:16px;margin-top:10px;color:#5b5b55}
+.experience-tags{list-style:none;display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 25px;padding:0}.experience-tags li{font-size:13px;line-height:1.5;border:1px solid var(--line);padding:5px 10px}
+.experience-points{margin:0;padding-left:20px;color:#5b5b55;font-size:16px;line-height:1.95}.experience-points li{padding-left:4px}.experience-points li+li{margin-top:14px}.experience-points li::marker{color:#a93317}
+@media(max-width:1000px){.strength-list{grid-template-columns:1fr}.strength-list article{padding:28px 0}.strength-list article+article{border-left:0;border-top:1px solid #77766e;padding-left:0}.strength-list article:last-child{padding-bottom:0}.strength-list h3{margin:20px 0 16px}.strength-list h3 br{display:none}.strength-list p{max-width:760px}.experience-entry{grid-template-columns:minmax(170px,.5fr) minmax(0,1.5fr);gap:30px}}
+@media(max-width:760px){.about-page .page-intro>p{font-size:16px}.about-page .about-grid{grid-template-columns:minmax(0,1fr);gap:35px}.about-section-heading{display:block;margin:36px 0 30px}.about-section-heading>p{margin-top:18px;max-width:none}.about-bio{margin:24px 0 30px}.about-page .about-details>div{grid-template-columns:85px minmax(0,1fr)}.experience-entry{grid-template-columns:minmax(0,1fr);gap:18px;padding:28px 0 36px}.experience-period{flex-direction:row;flex-wrap:wrap;align-items:center;gap:15px;font-size:14px}.experience-tags{margin:18px 0 22px}.about-page .section-label{gap:12px}.about-page .section-label>span:last-child{font-size:11px}.about-page .contact-placeholder{font-size:clamp(18px,5.3vw,22px)}}

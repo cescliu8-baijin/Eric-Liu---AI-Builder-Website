@@ -1,0 +1,6 @@
+/* Export shell only; the standalone demo has no application sidebar or mobile bar. */
+.inquiry-standalone { margin: 0; background: var(--canvas); }
+.inquiry-standalone .lily-secondary.inquiry-page { height: 100dvh; }
+@media (max-width: 560px) {
+  .inquiry-standalone .lily-secondary.inquiry-page { min-height: 500px; }
+}

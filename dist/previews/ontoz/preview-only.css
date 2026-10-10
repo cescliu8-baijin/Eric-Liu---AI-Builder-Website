@@ -1,0 +1,10 @@
+html,body{overflow:hidden!important;pointer-events:none!important;user-select:none!important}
+body{cursor:default}
+body *{caret-color:transparent!important}
+.skip-link,.mobile-app-bar,.mobile-nav-scrim,.toast{display:none!important}
+/* Subtle motion on John's existing observation graphic, without changing demo figures. */
+#johnHome .jn-funnel-image{animation:portfolio-observe 6s ease-in-out infinite}
+#johnHome .jn-live{animation:portfolio-pulse 2.4s ease-in-out infinite}
+@keyframes portfolio-observe{0%,100%{filter:brightness(1);transform:translateY(0)}50%{filter:brightness(1.04);transform:translateY(-4px)}}
+@keyframes portfolio-pulse{50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

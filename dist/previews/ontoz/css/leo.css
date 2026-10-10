@@ -1,0 +1,968 @@
+/* Leo exhibition marketing conversation flow. */
+.leo-exhibition-page {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100vh;
+  padding: 12px;
+  background: var(--canvas);
+}
+
+.zoe-flow-card {
+  width: 100%;
+  min-height: calc(100vh - 24px);
+  margin-inline: auto;
+}
+
+.zoe-flow-card > header {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: var(--oz-white-96);
+  backdrop-filter: blur(14px);
+}
+
+.zoe-flow-card > header button:hover {
+  color: var(--oz-indigo-600);
+  background: var(--oz-indigo-50);
+}
+
+.zoe-flow-body {
+  display: grid;
+  grid-template-columns: 126px minmax(0, 1fr);
+  gap: 28px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 24px 0 80px;
+}
+
+.zoe-step-nav {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
+.zoe-step-nav ol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0;
+  padding: 2px 0;
+  list-style: none;
+}
+
+.zoe-step-nav ol::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 5px;
+  width: 1px;
+  background: var(--oz-neutral-200);
+}
+
+.zoe-step-nav li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.zoe-step-nav li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  z-index: 1;
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--oz-white);
+  border-radius: 50%;
+  background: var(--oz-neutral-300);
+  box-shadow: var(--oz-shadow-2xs);
+}
+
+.zoe-step-nav li.active::before,
+.zoe-step-nav li.complete::before {
+  background: var(--oz-indigo-500);
+  box-shadow: var(--oz-shadow-2xs);
+}
+
+.zoe-step-nav button {
+  padding: 0;
+  border: 0;
+  color: var(--oz-neutral-400);
+  background: transparent;
+  font: inherit;
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.zoe-step-nav li.active button {
+  color: var(--foreground);
+  font-weight: var(--oz-weight-semibold);
+}
+
+.zoe-step-nav li.complete button {
+  color: var(--oz-neutral-600);
+}
+
+.zoe-step-nav li:not(.active, .complete) button {
+  cursor: default;
+}
+
+.zoe-conversation {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.zoe-flow-step {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: zoeStepIn .24s ease both;
+}
+
+.zoe-flow-step.is-thinking > .zoe-question,
+.zoe-flow-step.is-thinking > .zoe-answer-card {
+  display: none;
+}
+
+.zoe-flow-step[hidden],
+.zoe-success-card[hidden],
+.zoe-upload[hidden] {
+  display: none !important;
+}
+
+.zoe-question {
+  width: max-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 9px 9px 9px 2px;
+  color: var(--oz-neutral-800);
+  background: var(--oz-neutral-100);
+  font-size: var(--oz-text-sm);
+  line-height: var(--oz-leading-sm);
+}
+
+.zoe-answer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: var(--oz-neutral-100);
+  transition: border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+.zoe-answer-card:hover {
+  border-color: var(--oz-neutral-200);
+}
+
+.zoe-flow-step.is-confirmed .zoe-answer-card {
+  background: var(--oz-neutral-50);
+}
+
+.zoe-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.zoe-card-heading h2,
+.zoe-task-summary h2,
+.zoe-success-card h2 {
+  margin: 2px 0 0;
+  color: var(--foreground);
+  font-size: var(--oz-text-sm);
+  line-height: var(--oz-leading-sm);
+  font-weight: var(--oz-weight-semibold);
+}
+
+.zoe-kicker {
+  display: block;
+  color: var(--oz-neutral-500);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-match-badge,
+.zoe-status-badge {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: var(--oz-green-700);
+  background: var(--oz-green-100);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-status-badge {
+  color: var(--oz-amber-700);
+  background: var(--oz-amber-100);
+}
+
+.zoe-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.zoe-field-grid-compact {
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+}
+
+.zoe-field-wide {
+  grid-column: 1 / -1;
+}
+
+.zoe-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zoe-field-spaced {
+  margin-top: 2px;
+}
+
+.zoe-field > span,
+.zoe-channel-fieldset legend {
+  color: var(--oz-neutral-600);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+  font-weight: var(--oz-weight-medium);
+}
+
+.zoe-field input,
+.zoe-field textarea,
+.zoe-field select {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--oz-neutral-200);
+  border-radius: 8px;
+  outline: 0;
+  color: var(--foreground);
+  background: var(--oz-white);
+  font: inherit;
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+  transition: border-color .16s ease, box-shadow .16s ease;
+}
+
+.zoe-field input,
+.zoe-field select {
+  height: 36px;
+}
+
+.zoe-field textarea {
+  resize: vertical;
+}
+
+.zoe-field input:focus,
+.zoe-field textarea:focus,
+.zoe-field select:focus {
+  border-color: var(--oz-indigo-400);
+  box-shadow: var(--oz-shadow-focus);
+}
+
+.zoe-flow-step.is-confirmed .zoe-field input,
+.zoe-flow-step.is-confirmed .zoe-field textarea,
+.zoe-flow-step.is-confirmed .zoe-field select {
+  color: var(--oz-neutral-600);
+  background: var(--oz-white-72);
+}
+
+.zoe-card-actions {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zoe-card-actions > button,
+.zoe-ghost-button,
+.zoe-launch-button,
+.zoe-success-card a,
+.zoe-success-card button {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+  text-decoration: none;
+}
+
+.zoe-card-actions svg,
+.zoe-ghost-button svg,
+.zoe-launch-button svg,
+.zoe-success-card svg {
+  width: 15px;
+  height: 15px;
+}
+
+.zoe-primary-button,
+.zoe-launch-button {
+  margin-left: auto;
+  color: var(--oz-white);
+  background: var(--oz-indigo-600);
+  box-shadow: var(--oz-shadow-xs);
+}
+
+.zoe-primary-button:hover,
+.zoe-launch-button:hover {
+  background: var(--oz-indigo-700);
+}
+
+.zoe-primary-button:disabled,
+.zoe-launch-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.zoe-edit-button,
+.zoe-ghost-button {
+  color: var(--oz-neutral-600);
+  background: var(--oz-white);
+  box-shadow: var(--oz-shadow-2xs);
+}
+
+.zoe-edit-button:hover,
+.zoe-ghost-button:hover {
+  color: var(--oz-indigo-700);
+  background: var(--oz-indigo-50);
+  box-shadow: var(--oz-shadow-2xs);
+}
+
+.zoe-confirmed-label {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  color: var(--oz-green-600);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-confirmed-label svg {
+  width: 15px;
+  height: 15px;
+}
+
+.zoe-edit-button {
+  display: none !important;
+}
+
+.zoe-flow-step.is-confirmed .zoe-confirmed-label,
+.zoe-flow-step.is-confirmed .zoe-edit-button {
+  display: inline-flex !important;
+}
+
+.zoe-flow-step.is-confirmed .zoe-primary-button {
+  display: none;
+}
+
+.zoe-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.zoe-chip {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px 4px 9px;
+  border: 1px solid var(--oz-indigo-200);
+  border-radius: 8px;
+  color: var(--oz-indigo-700);
+  background: var(--oz-indigo-50);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-chip-country {
+  color: var(--oz-sky-700);
+  border-color: var(--oz-sky-200);
+  background: var(--oz-sky-50);
+}
+
+.zoe-chip button {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  color: inherit;
+  background: transparent;
+}
+
+.zoe-chip button:hover {
+  background: var(--oz-black-8);
+}
+
+.zoe-chip button svg {
+  width: 12px;
+  height: 12px;
+}
+
+.zoe-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.zoe-choice-grid > button {
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 12px;
+  border: 1px solid var(--oz-neutral-200);
+  border-radius: 10px;
+  color: var(--oz-neutral-500);
+  background: var(--oz-white);
+  text-align: left;
+}
+
+.zoe-choice-grid > button > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.zoe-choice-grid > button strong {
+  color: var(--foreground);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-choice-grid > button span {
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-choice-grid > button.active {
+  color: var(--oz-indigo-600);
+  border-color: var(--oz-indigo-400);
+  background: var(--oz-indigo-50);
+  box-shadow: var(--oz-shadow-2xs);
+}
+
+.zoe-upload {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px;
+  border: 1px dashed var(--oz-neutral-300);
+  border-radius: 10px;
+  color: var(--oz-neutral-500);
+  background: var(--oz-white);
+  cursor: pointer;
+}
+
+.zoe-upload > svg {
+  width: 28px;
+  height: 28px;
+}
+
+.zoe-upload strong {
+  color: var(--oz-neutral-700);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-upload span {
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-upload input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.zoe-channel-fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.zoe-channel-fieldset legend {
+  width: 100%;
+  margin-bottom: 1px;
+}
+
+.zoe-channel-fieldset label {
+  cursor: pointer;
+}
+
+.zoe-channel-fieldset input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.zoe-channel-fieldset span {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border: 1px solid var(--oz-neutral-200);
+  border-radius: 8px;
+  color: var(--oz-neutral-500);
+  background: var(--oz-white);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-channel-fieldset input:checked + span {
+  color: var(--oz-indigo-700);
+  border-color: var(--oz-indigo-300);
+  background: var(--oz-indigo-50);
+}
+
+.zoe-channel-fieldset svg,
+.zoe-channel-fieldset img {
+  width: 14px;
+  height: 14px;
+}
+
+.zoe-template-card textarea {
+  min-height: 210px;
+}
+
+.zoe-task-summary {
+  padding: 14px;
+  border: 1px solid var(--oz-neutral-200);
+  border-radius: 10px;
+  background: var(--oz-white);
+}
+
+.zoe-task-summary dl {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.zoe-task-summary dl > div {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 12px;
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-task-summary dt {
+  color: var(--oz-neutral-500);
+}
+
+.zoe-task-summary dd {
+  margin: 0;
+  text-align: right;
+}
+
+.zoe-task-summary dd strong {
+  color: var(--oz-indigo-600);
+  font-size: var(--oz-text-xl);
+  line-height: var(--oz-leading-xl);
+}
+
+.zoe-volume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.zoe-volume-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 6px;
+  border-radius: 8px;
+  background: var(--oz-neutral-50);
+}
+
+.zoe-volume-grid span {
+  color: var(--oz-neutral-500);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-volume-grid strong {
+  font-size: var(--oz-text-lg);
+  line-height: var(--oz-leading-lg);
+  font-weight: var(--oz-weight-semibold);
+}
+
+.zoe-launch-button {
+  width: 100%;
+  min-height: 38px;
+  margin-left: 0;
+}
+
+.zoe-success-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 20px;
+  border: 1px solid var(--oz-green-200);
+  border-radius: 12px;
+  background: var(--oz-green-50);
+  text-align: center;
+  animation: zoeStepIn .28s ease both;
+}
+
+.zoe-success-card img {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 4px;
+  object-fit: contain;
+}
+
+.zoe-success-card > svg {
+  width: 22px;
+  height: 22px;
+  color: var(--oz-green-600);
+}
+
+.zoe-success-card p {
+  max-width: 420px;
+  margin: 7px 0 16px;
+  color: var(--oz-neutral-500);
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-success-card > div {
+  display: flex;
+  gap: 8px;
+}
+
+.zoe-success-card a {
+  color: var(--oz-white);
+  background: var(--oz-indigo-600);
+}
+
+.zoe-success-card button {
+  color: var(--oz-neutral-700);
+  background: var(--oz-white);
+  box-shadow: var(--oz-shadow-2xs);
+}
+
+.zoe-thinking-card {
+  display: flex;
+  align-items: stretch;
+  gap: 9px;
+  padding: 3px 2px 5px;
+  color: var(--oz-neutral-900);
+  text-align: left;
+}
+
+.zoe-thinking-rail {
+  width: 18px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding-top: 3px;
+  color: var(--oz-indigo-600);
+}
+
+.zoe-thinking-rail svg {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+
+.zoe-thinking-card.current .zoe-thinking-rail svg {
+  animation: spin 1.15s linear infinite;
+}
+
+.zoe-thinking-card.done .zoe-thinking-rail {
+  color: var(--oz-green-600);
+}
+
+.zoe-thinking-rail span {
+  width: 1px;
+  min-height: 24px;
+  flex: 1;
+  background: var(--oz-neutral-200);
+}
+
+.zoe-thinking-card.collapsed .zoe-thinking-rail span {
+  display: none;
+}
+
+.zoe-thinking-content {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.zoe-thinking-summary {
+  max-width: 100%;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  color: var(--oz-neutral-900);
+  background: transparent;
+  font: inherit;
+  font-size: var(--oz-text-sm);
+  line-height: var(--oz-leading-sm);
+  font-weight: var(--oz-weight-semibold);
+  text-align: left;
+}
+
+.zoe-thinking-summary > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zoe-thinking-summary > svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  color: var(--oz-neutral-400);
+  transition: transform .18s ease;
+}
+
+.zoe-thinking-summary:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.zoe-thinking-card.current .zoe-thinking-summary > svg {
+  display: none;
+}
+
+.zoe-thinking-card.collapsed .zoe-thinking-summary > svg {
+  transform: rotate(-90deg);
+}
+
+.zoe-thinking-stream {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  font-size: var(--oz-text-xs);
+  line-height: var(--oz-leading-xs);
+}
+
+.zoe-thinking-card.collapsed .zoe-thinking-stream {
+  display: none;
+}
+
+.zoe-thinking-line {
+  max-width: 760px;
+  margin: 0;
+  color: var(--oz-neutral-600);
+  letter-spacing: var(--oz-tracking-normal);
+  opacity: 0;
+  transform: translateY(4px);
+  animation: zoeThinkingIn .24s ease forwards;
+}
+
+.zoe-thinking-line + .zoe-thinking-line {
+  margin-top: 2px;
+}
+
+.zoe-thinking-waiting {
+  margin: 0;
+  color: var(--oz-neutral-400);
+  animation: zoeThinkingPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes zoeStepIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoeThinkingIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoeThinkingPulse {
+  50% { opacity: .48; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zoe-flow-step,
+  .zoe-success-card,
+  .zoe-thinking-line,
+  .zoe-thinking-waiting { animation: none; opacity: 1; transform: none; }
+}
+
+@media (max-width: 760px) {
+  .zoe-flow-body {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: calc(100% - 28px);
+    padding-top: 14px;
+  }
+
+  .zoe-step-nav {
+    position: sticky;
+    top: 56px;
+    z-index: 7;
+    margin-inline: -14px;
+    padding: 10px 14px;
+    overflow-x: auto;
+    background: var(--oz-white-96);
+    backdrop-filter: blur(12px);
+  }
+
+  .zoe-step-nav ol {
+    width: max-content;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .zoe-step-nav ol::before,
+  .zoe-step-nav li::before {
+    display: none;
+  }
+
+  .zoe-step-nav li {
+    padding: 0;
+  }
+
+  .zoe-step-nav button {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--oz-neutral-100);
+  }
+
+  .zoe-step-nav li.active button {
+    color: var(--oz-white);
+    background: var(--oz-indigo-600);
+  }
+
+  .zoe-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zoe-choice-grid > button {
+    min-height: 86px;
+  }
+}
+
+@media (max-width: 560px) {
+  .leo-exhibition-page {
+    padding: 8px;
+  }
+
+  .zoe-flow-card {
+    min-height: calc(100vh - 72px);
+    border-radius: 10px;
+  }
+
+  .zoe-flow-card > header {
+    top: 56px;
+  }
+
+  .zoe-flow-body {
+    width: calc(100% - 20px);
+    padding-bottom: 40px;
+  }
+
+  .zoe-step-nav {
+    top: 112px;
+    margin-inline: -10px;
+    padding-inline: 10px;
+  }
+
+  .zoe-answer-card {
+    padding: 13px;
+  }
+
+  .zoe-field-grid,
+  .zoe-field-grid-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .zoe-field-wide {
+    grid-column: auto;
+  }
+
+  .zoe-card-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .zoe-card-heading .zoe-ghost-button,
+  .zoe-match-badge,
+  .zoe-status-badge {
+    align-self: flex-start;
+  }
+
+  .zoe-card-actions {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .zoe-primary-button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .zoe-flow-step.is-confirmed .zoe-card-actions {
+    align-items: center;
+  }
+
+  .zoe-task-summary dl > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .zoe-task-summary dd {
+    text-align: left;
+  }
+
+  .zoe-volume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zoe-success-card > div {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .zoe-thinking-summary {
+    align-items: flex-start;
+    font-size: var(--oz-text-xs);
+    line-height: var(--oz-leading-xs);
+  }
+}

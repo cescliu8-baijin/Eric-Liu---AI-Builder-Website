@@ -1,0 +1,67 @@
+/* Cross-project application of FTHBdjdvyoZuGJxEzFncR3GAnzd, chapter 3.
+   Component internals respond to their available container, not device names. */
+body { font-family:var(--oz-font-family-sans); font-size:var(--oz-text-sm); line-height:var(--oz-leading-sm); }
+body.agent-home-shell .app-workspace { min-width:0; }
+body[data-agent-nav="desktop"] .app-workspace { width:calc(100% - 240px); margin-left:240px; }
+body[data-agent-nav="desktop"] .sidebar.collapsed + .app-workspace { width:calc(100% - 64px); margin-left:64px; }
+body[data-agent-nav="desktop"] .sidebar { width:240px; }
+body[data-agent-nav="desktop"] .sidebar.collapsed { width:64px; }
+/* Wrapper-only routes delegate the gutter to the actual content root. */
+body.agent-home-shell :is(#lilyHome,#zoePage,#wendyPage,#johnPage) { padding:0; }
+body.agent-home-shell #wendyApp .wd-content:has(#wendyHome) { max-width:none; padding:0; }
+body.agent-home-shell :is(#lucasPage,#lilyDashboard,#lilyAgent,#lilyTemplatesPage,#lilyTasksPage,#lilyInquiryPage,.core-page,#leoPage),
+body.agent-home-shell #wendyApp .wd-content:not(:has(#wendyHome)) {
+  box-sizing:border-box; width:100%; max-width:var(--oz-page-max); min-width:0;
+  margin-inline:auto; padding:24px var(--oz-page-padding); container:page / inline-size;
+}
+body.agent-home-shell .agent-v2 { max-width:var(--oz-page-max); }
+body.agent-home-shell :is(.core-grid,.core-main,.core-side,.john-main-grid,.lucas-hero) { gap:var(--oz-module-gap); }
+body.agent-home-shell .core-grid { grid-template-columns:minmax(0,1fr) clamp(360px,30cqw,480px); }
+body.agent-home-shell :is(.core-grid,.core-main,.core-side) > * { min-width:0; }
+body.agent-home-shell .section-title-row { flex-wrap:wrap; }
+body.agent-home-shell .filter-row { grid-template-columns:repeat(3,minmax(0,1fr)); }
+body.agent-home-shell .filter-row > * { min-width:0; }
+body.agent-home-shell :is(.av2-header,.av2-columns,.av2-main) { gap:var(--oz-module-gap); }
+body.agent-home-shell .av2-header { margin-bottom:var(--oz-module-gap); }
+body.agent-home-shell .agent-v2 .av2-status { padding:16px 24px; }
+body.agent-home-shell :is(.john-hero,.lucas-hero) { margin-bottom:var(--oz-module-gap); }
+body.agent-home-shell .lily-secondary.inquiry-page { gap:var(--oz-module-gap); min-height:0; }
+body.agent-home-shell .inquiry-workbench { min-width:0; min-height:0; }
+body.agent-home-shell :is(.core-card,.john-card,.lucas-card) { overflow-wrap:anywhere; }
+body[data-agent-nav="mobile"] :is(.agent-topbar,.zoe-flow-card > header) { top:56px; }
+body[data-agent-nav="mobile"] .agent-topbar { left:0; }
+body[data-agent-nav="rail"] .agent-topbar { left:64px; }
+body[data-agent-nav="mobile"] .agent-composer { left:50%; max-width:calc(100% - 32px); }
+body[data-agent-nav="rail"] .agent-composer { left:calc(64px + (100vw - 64px)/2); }
+body[data-agent-nav="mobile"] .lily-secondary.inquiry-page { height:calc(100dvh - 56px); }
+@container page (width < 1024px) {
+  body.agent-home-shell :is(.core-grid,.john-main-grid,.lucas-hero) { grid-template-columns:minmax(0,1fr); }
+  body.agent-home-shell .core-side { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@container page (width < 640px) {
+  body.agent-home-shell :is(.core-side,.overview-stats,.filter-row,.customer-summary,.mini-metrics,.side-stat-grid) { grid-template-columns:minmax(0,1fr); }
+  body.agent-home-shell :is(.john-hero,.customer-toolbar) { align-items:stretch; flex-direction:column; }
+  body.agent-home-shell .period-toggle { flex-wrap:wrap; }
+}
+@media (width < 768px) {
+  body.agent-home-shell :is(input,textarea,select) { font-size:var(--oz-text-base); line-height:var(--oz-leading-base); }
+  body.agent-home-shell .agent-v2 .av2-prompt-box textarea { font-size:var(--oz-text-base); line-height:var(--oz-leading-base); }
+  body.agent-home-shell .av2-attention { top:68px; }
+}
+/* Non-collaboration homepages use the same display-title exception. */
+body.agent-home-shell h1.agent-hero-title { font-size:48px; line-height:56px; }
+@container page (width < 1024px) {
+  body.agent-home-shell h1.agent-hero-title { font-size:40px; line-height:48px; }
+}
+@media (width < 768px) {
+  body.agent-home-shell h1.agent-hero-title { font-size:30px; line-height:40px; }
+}
+/* Shared surface elevation; large elevation is reserved for overlays. */
+body.agent-home-shell #wendyHome :is(.wd-v22-performance,.wd-home-goal-panel,.wd-runtime-review,.av2-collab) { box-shadow:var(--oz-shadow-sm); }
+body.agent-home-shell :is(.lucas-layout,.lucas-main,.lucas-side,.john-dashboard-grid,.john-lower-grid,.john-metric-grid) { gap:var(--oz-module-gap); }
+body.agent-home-shell :is(.lucas-layout,.john-dashboard-grid,.john-lower-grid,.john-dashboard-table-card) { margin-top:var(--oz-module-gap); }
+body.agent-home-shell :is(.lucas-layout,.lucas-hero,.john-dashboard-grid) { grid-template-columns:minmax(0,1fr) clamp(360px,30cqw,480px); }
+@container page (width < 1024px) {
+  body.agent-home-shell :is(.lucas-layout,.lucas-hero,.john-dashboard-grid,.john-lower-grid) { grid-template-columns:minmax(0,1fr); }
+}
+body.agent-home-shell #zoePage > .zoe-create { box-sizing:border-box; width:100%; max-width:var(--oz-page-max); margin-inline:auto; padding:24px var(--oz-page-padding); container:page / inline-size; }

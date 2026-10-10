@@ -1,0 +1,63 @@
+/* OntoZ component library: oPNMfPosKibiZoqjOLh92h. Read docs/design-system/figma-foundations.json. */
+:root {
+  --oz-font-family-sans: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --oz-font-family-mono: "Geist Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --oz-font-family-sans-serif: "Nunito Sans", "PingFang SC", sans-serif;
+  --oz-font-family-monospace: "Jetbrains Mono", ui-monospace, monospace;
+  --oz-text-xs: 12px; --oz-leading-xs: 16px;
+  --oz-text-sm: 14px; --oz-leading-sm: 20px;
+  --oz-text-base: 16px; --oz-leading-base: 24px;
+  --oz-text-lg: 18px; --oz-leading-lg: 28px;
+  --oz-text-xl: 20px; --oz-leading-xl: 28px;
+  --oz-text-2xl: 24px; --oz-leading-2xl: 32px;
+  --oz-text-3xl: 30px; --oz-leading-3xl: 36px;
+  --oz-text-4xl: 36px; --oz-leading-4xl: 40px;
+  --oz-text-5xl: 48px; --oz-leading-5xl: 48px;
+  --oz-text-6xl: 60px; --oz-leading-6xl: 60px;
+  --oz-text-7xl: 72px; --oz-leading-7xl: 72px;
+  --oz-text-8xl: 96px; --oz-leading-8xl: 96px;
+  --oz-text-9xl: 128px; --oz-leading-9xl: 128px;
+  --oz-leading-3: 12px;
+  --oz-leading-4: 16px;
+  --oz-leading-5: 20px;
+  --oz-leading-6: 24px;
+  --oz-leading-7: 28px;
+  --oz-leading-8: 32px;
+  --oz-leading-9: 36px;
+  --oz-leading-10: 40px;
+  --oz-leading-12: 48px;
+  --oz-leading-15: 60px;
+  --oz-leading-18: 72px;
+  --oz-leading-24: 96px;
+  --oz-leading-32: 128px;
+  --oz-weight-thin: 100;
+  --oz-weight-extralight: 200;
+  --oz-weight-light: 300;
+  --oz-weight-normal: 400;
+  --oz-weight-medium: 500;
+  --oz-weight-semibold: 600;
+  --oz-weight-bold: 700;
+  --oz-weight-extrabold: 800;
+  --oz-weight-black: 900;
+  --oz-tracking-tighter: -0.8px;
+  --oz-tracking-tight: -0.4px;
+  --oz-tracking-normal: 0px;
+  --oz-tracking-wide: 0.4px;
+  --oz-tracking-wider: 0.8px;
+  --oz-tracking-widest: 1.6px;
+  --oz-font-style-normal: normal; --oz-font-style-italic: italic;
+  --oz-shadow-2xs: 0 1px 0 0 rgb(0 0 0 / .05);
+  --oz-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / .1);
+  --oz-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / .1);
+  --oz-shadow-md: 0 2px 4px -2px rgb(0 0 0 / .1), 0 4px 6px -1px rgb(0 0 0 / .1);
+  --oz-shadow-lg: 0 4px 6px -4px rgb(0 0 0 / .1), 0 10px 15px -3px rgb(0 0 0 / .1);
+  --oz-shadow-xl: 0 8px 10px -6px rgb(0 0 0 / .1), 0 20px 25px -5px rgb(0 0 0 / .1);
+  --oz-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / .25);
+  --oz-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / .06);
+  --oz-shadow-none: none;
+  --oz-shadow-focus: 0 0 0 3px rgb(161 161 161 / .5);
+  --oz-shadow-destructive: 0 0 0 3px rgb(220 38 38 / .2);
+  --oz-page-max: 1664px; --oz-page-padding: 32px; --oz-module-gap: 24px;
+}
+@media (width < 1440px) { :root { --oz-page-padding: 24px; } }
+@media (width < 768px) { :root { --oz-page-padding: 16px; --oz-module-gap: 16px; } }
