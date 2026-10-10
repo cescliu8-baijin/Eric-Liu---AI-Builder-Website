@@ -1,4 +1,41 @@
 .DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Credentials and local environment settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.ssh/
+.netrc
+.npmrc
+
+# Local tools, caches, and deployment metadata
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.swp
+*.swo
+.vercel/
+.idea/
+.vscode/
+.openai/
+.codex/
+.agents/
+
+# Working materials are not part of the published website
+work/
 work/backups/
 work/ai-workflow-*.jpg
 .sites-runtime/
