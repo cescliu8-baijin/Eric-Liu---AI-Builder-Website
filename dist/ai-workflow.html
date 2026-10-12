@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Workflow — Eric Liu</title>
+  <title>AI Workflow Eric Liu</title>
   <meta name="description" content="AI 解决实际问题的方法笔记：文档生成、Figma 协作、Demo 发布、技术实现调研与 AI 验收。">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff4c24' d='M0 0h32v32H0z'/%3E%3Ctext x='4' y='24' font-family='Arial' font-size='23' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=b4c8865978">
+  <link rel="stylesheet" href="styles.css?v=20261012-unified-intro">
   <link rel="stylesheet" href="ai-workflow.css?v=20261009a">
 </head>
 <body class="subpage workflow-page">
@@ -16,71 +16,73 @@
 </header>
 <main id="main">
 <section class="page-intro workflow-intro">
-  <div class="meta workflow-eyebrow"><span>AI WORKFLOW / FIELD NOTES</span><span>05 TOPICS · 持续记录</span></div>
+  <div class="meta workflow-eyebrow"><span>AI WORKFLOW FIELD NOTES</span><span>05 TOPICS 持续记录</span></div>
   <h1 class="page-title">AI workflow<span class="workflow-star" aria-hidden="true">*</span></h1>
-  <div class="workflow-intro-copy"><h2>用 AI 解决实际问题。<br>把实践沉淀为方法。</h2><p>汇总 AI 参与实际工作的案例，记录从问题、尝试到验证的过程，以及可以复用的方法与经验。</p></div>
+  <div class="workflow-intro-copy"><h2>用 AI 解决实际问题<br>把实践沉淀为方法</h2><p>汇总 AI 参与实际工作的案例 记录从问题 尝试到验证的过程 以及可以复用的方法与经验</p></div>
   <nav class="workflow-index" aria-label="AI Workflow 主题目录">
-<a href="#documents"><span class="meta">01 / DOCUMENTS</span><span>AI 生成文档</span></a>
-<a href="#figma"><span class="meta">02 / FIGMA COLLABORATION</span><span>AI 和 Figma 协作</span></a>
-<a href="#deployment"><span class="meta">03 / DEMO TO LIVE</span><span>Demo 发布上线</span></a>
-<a href="#research"><span class="meta">04 / TECHNICAL RESEARCH</span><span>AI 调研技术实现</span></a>
-<a href="#validation"><span class="meta">05 / REVIEW & VALIDATION</span><span>AI 验收</span></a>
+<a href="#documents"><span class="meta">01 DOCUMENTS</span><span>AI 生成文档</span></a>
+<a href="#figma"><span class="meta">02 FIGMA COLLABORATION</span><span>AI 和 Figma 协作</span></a>
+<a href="#deployment"><span class="meta">03 DEMO TO LIVE</span><span>Demo 发布上线</span></a>
+<a href="#research"><span class="meta">04 TECHNICAL RESEARCH</span><span>AI 调研技术实现</span></a>
+<a href="#validation"><span class="meta">05 REVIEW AND VALIDATION</span><span>AI 验收</span></a>
 </nav>
 </section>
 <section class="workflow-notice" aria-label="内容说明"><span class="meta">ABOUT THESE NOTES</span><p>以下为方法初稿；真实案例与实践结果将逐步补充。</p></section>
 <section id="documents" class="section workflow-chapter" aria-labelledby="documents-title">
-  <div class="section-label meta"><span>01 / DOCUMENTS</span><span>METHOD NOTES</span></div>
+  <div class="section-label meta"><span>01 DOCUMENTS</span><span>METHOD NOTES</span></div>
   <div class="workflow-layout">
-    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">01</span><h2 id="documents-title">AI 生成文档</h2><p class="workflow-lead">让零散信息，成为可交付的文档。</p><p class="workflow-description">从需求说明、会议记录到方案汇报，把资料整理、结构搭建和表达优化串成一条工作流。</p><div class="workflow-output"><span class="meta">DELIVERABLE / 交付物</span><p>结构清晰的文档 + 可追溯的资料来源</p></div></div>
+    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">01</span><h2 id="documents-title">AI 生成文档</h2><p class="workflow-lead">让零散信息 成为可交付的文档</p><p class="workflow-description">从需求说明、会议记录到方案汇报，把资料整理、结构搭建和表达优化串成一条工作流。</p><div class="workflow-output"><span class="meta">DELIVERABLE 交付物</span><p>结构清晰的文档 + 可追溯的资料来源</p></div></div>
     <div class="workflow-content"><div class="workflow-scenario"><h3>解决什么问题</h3><p>资料分散、表达不成体系，需要整理成能被他人理解和使用的文档。</p></div>
     <h3 class="workflow-method-title">如何推进</h3><ol class="workflow-steps"><li><span class="meta">01</span><div><h4>定义交付</h4><p>先说明读者是谁、文档用途、已有资料，以及最终需要的格式。</p></div></li><li><span class="meta">02</span><div><h4>先定结构</h4><p>让 AI 提炼问题、搭建目录，标记缺失信息，再逐节展开内容。</p></div></li><li><span class="meta">03</span><div><h4>核对与排版</h4><p>核对事实、数字和引用，再检查导出后的层级、分页与阅读体验。</p></div></li></ol>
-    <aside class="workflow-lesson"><span class="meta">TAKEAWAY / 经验要点</span><p>把“内容是否准确”和“表达是否清楚”分开检查。信息不足时保留问题，避免用流畅的文字填补事实空白。</p></aside>
-    <details class="workflow-case"><summary><span>案例记录 <span class="workflow-status">待补充</span></span><span class="toggle" aria-hidden="true">+</span></summary><div class="workflow-case-body"><span class="meta">建议收录方向</span><h3>将零散需求整理为产品需求文档</h3><p>原始笔记、目录迭代、成稿对照，以及人工修订的关键内容。</p><p class="workflow-case-note">记录结构：实际问题 / AI 如何参与 / 人工判断 / 结果与复盘</p></div></details>
+    <aside class="workflow-lesson"><span class="meta">TAKEAWAY 经验要点</span><p>把“内容是否准确”和“表达是否清楚”分开检查。信息不足时保留问题，避免用流畅的文字填补事实空白。</p></aside>
     </div>
   </div>
 </section>
 <section id="figma" class="section workflow-chapter" aria-labelledby="figma-title">
-  <div class="section-label meta"><span>02 / FIGMA COLLABORATION</span><span>METHOD NOTES</span></div>
+  <div class="section-label meta"><span>02 FIGMA COLLABORATION</span><span>METHOD NOTES</span></div>
   <div class="workflow-layout">
-    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">02</span><h2 id="figma-title">AI 和 Figma 协作</h2><p class="workflow-lead">让设计意图，在协作中保持一致。</p><p class="workflow-description">围绕页面结构、组件和设计规范组织上下文，让 AI 参与界面构建与调整。</p><div class="workflow-output"><span class="meta">DELIVERABLE / 交付物</span><p>可继续编辑的设计稿 + 设计决策记录</p></div></div>
+    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">02</span><h2 id="figma-title">AI 和 Figma 协作</h2><p class="workflow-lead">让设计意图 在协作中保持一致</p><p class="workflow-description">围绕页面结构、组件和设计规范组织上下文，让 AI 参与界面构建与调整。</p><div class="workflow-output"><span class="meta">DELIVERABLE 交付物</span><p>可继续编辑的设计稿 + 设计决策记录</p></div></div>
     <div class="workflow-content"><div class="workflow-scenario"><h3>解决什么问题</h3><p>已有设计规范或参考界面，需要快速完成页面搭建，并保持视觉与交互的一致性。</p></div>
     <h3 class="workflow-method-title">如何推进</h3><ol class="workflow-steps"><li><span class="meta">01</span><div><h4>准备设计上下文</h4><p>明确目标页面、参考范围、组件规范，以及本次需要调整的内容。</p></div></li><li><span class="meta">02</span><div><h4>按区域协作</h4><p>先梳理布局与信息层级，再逐块处理组件、文案和不同状态。</p></div></li><li><span class="meta">03</span><div><h4>对照检查</h4><p>对照设计稿检查字号、间距、组件使用和交互状态，逐项记录差异。</p></div></li></ol>
-    <aside class="workflow-lesson"><span class="meta">TAKEAWAY / 经验要点</span><p>先约定规范，再推进页面。每次围绕一个明确区域反馈，比同时调整多个不相关问题更容易判断效果。</p></aside>
-    <details class="workflow-case"><summary><span>案例记录 <span class="workflow-status">待补充</span></span><span class="toggle" aria-hidden="true">+</span></summary><div class="workflow-case-body"><span class="meta">建议收录方向</span><h3>从已有设计规范扩展一个新页面</h3><p>参考设计、组件选用、协作前后对照，以及最终保留或调整的设计决策。</p><p class="workflow-case-note">记录结构：实际问题 / AI 如何参与 / 人工判断 / 结果与复盘</p></div></details>
+    <aside class="workflow-lesson"><span class="meta">TAKEAWAY 经验要点</span><p>先约定规范，再推进页面。每次围绕一个明确区域反馈，比同时调整多个不相关问题更容易判断效果。</p></aside>
     </div>
   </div>
 </section>
 <section id="deployment" class="section workflow-chapter" aria-labelledby="deployment-title">
-  <div class="section-label meta"><span>03 / DEMO TO LIVE</span><span>METHOD NOTES</span></div>
+  <div class="section-label meta"><span>03 DEMO TO LIVE</span><span>METHOD NOTES</span></div>
   <div class="workflow-layout">
-    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">03</span><h2 id="deployment-title">Demo 发布上线</h2><p class="workflow-lead">把本地想法，变成可以体验的链接。</p><p class="workflow-description">围绕一条完整体验路径，完成 Demo 构建、发布与线上检查，让方案进入真实反馈。</p><div class="workflow-output"><span class="meta">DELIVERABLE / 交付物</span><p>可访问的 Demo + 演示说明与版本记录</p></div></div>
+    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">03</span><h2 id="deployment-title">Demo 发布上线</h2><p class="workflow-lead">把本地想法 变成可以体验的链接</p><p class="workflow-description">围绕一条完整体验路径，完成 Demo 构建、发布与线上检查，让方案进入真实反馈。</p><div class="workflow-output"><span class="meta">DELIVERABLE 交付物</span><p>可访问的 Demo + 演示说明与版本记录</p></div></div>
     <div class="workflow-content"><div class="workflow-scenario"><h3>解决什么问题</h3><p>原型已能在本地运行，需要让协作者在自己的设备上打开、操作和反馈。</p></div>
     <h3 class="workflow-method-title">如何推进</h3><ol class="workflow-steps"><li><span class="meta">01</span><div><h4>收敛体验范围</h4><p>确定核心任务与演示路径，明确哪些功能可用、哪些使用示例数据。</p></div></li><li><span class="meta">02</span><div><h4>准备发布版本</h4><p>检查页面入口、资源路径、环境配置与访问范围，保存可回退版本。</p></div></li><li><span class="meta">03</span><div><h4>验证线上体验</h4><p>从正式入口重新走通关键路径，检查刷新、页面跳转和移动端展示。</p></div></li></ol>
-    <aside class="workflow-lesson"><span class="meta">TAKEAWAY / 经验要点</span><p>本地运行成功只是一个检查点。用访问者的视角重新打开链接，才能发现入口、权限和资源加载的问题。</p></aside>
-    <details class="workflow-case"><summary><span>案例记录 <span class="workflow-status">待补充</span></span><span class="toggle" aria-hidden="true">+</span></summary><div class="workflow-case-body"><span class="meta">建议收录方向</span><h3>将一个产品原型发布为可体验的 Demo</h3><p>核心体验路径、发布前检查、线上截图，以及收到反馈后的迭代。</p><p class="workflow-case-note">记录结构：实际问题 / AI 如何参与 / 人工判断 / 结果与复盘</p></div></details>
+    <aside class="workflow-lesson"><span class="meta">TAKEAWAY 经验要点</span><p>本地运行成功只是一个检查点。用访问者的视角重新打开链接，才能发现入口、权限和资源加载的问题。</p></aside>
     </div>
   </div>
 </section>
 <section id="research" class="section workflow-chapter" aria-labelledby="research-title">
-  <div class="section-label meta"><span>04 / TECHNICAL RESEARCH</span><span>METHOD NOTES</span></div>
+  <div class="section-label meta"><span>04 TECHNICAL RESEARCH</span><span>METHOD NOTES</span></div>
   <div class="workflow-layout">
-    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">04</span><h2 id="research-title">AI 调研技术实现</h2><p class="workflow-lead">把“能不能做”，拆成可以验证的问题。</p><p class="workflow-description">从产品目标出发，梳理技术路径、实现约束和验证方式，为设计与开发决策提供依据。</p><div class="workflow-output"><span class="meta">DELIVERABLE / 交付物</span><p>技术路径对比 + 最小验证记录</p></div></div>
+    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">04</span><h2 id="research-title">AI 调研技术实现</h2><p class="workflow-lead">把能不能做 拆成可以验证的问题</p><p class="workflow-description">从产品目标出发，梳理技术路径、实现约束和验证方式，为设计与开发决策提供依据。</p><div class="workflow-output"><span class="meta">DELIVERABLE 交付物</span><p>技术路径对比 + 最小验证记录</p></div></div>
     <div class="workflow-content"><div class="workflow-scenario"><h3>解决什么问题</h3><p>一个交互或 AI 能力是否可实现还不明确，需要在投入开发前确认边界。</p></div>
     <h3 class="workflow-method-title">如何推进</h3><ol class="workflow-steps"><li><span class="meta">01</span><div><h4>拆解关键问题</h4><p>明确输入、预期输出、使用场景，以及性能、成本或数据方面的约束。</p></div></li><li><span class="meta">02</span><div><h4>带着证据比较</h4><p>查阅官方资料与实际示例，记录来源和日期，区分已确认事实与推测。</p></div></li><li><span class="meta">03</span><div><h4>做最小验证</h4><p>选择最不确定的环节做小实验，保留成功条件、失败情况与下一步建议。</p></div></li></ol>
-    <aside class="workflow-lesson"><span class="meta">TAKEAWAY / 经验要点</span><p>让每一个关键结论对应证据。把“资料中支持”与“当前项目中验证通过”分别记录，避免过早下结论。</p></aside>
-    <details class="workflow-case"><summary><span>案例记录 <span class="workflow-status">待补充</span></span><span class="toggle" aria-hidden="true">+</span></summary><div class="workflow-case-body"><span class="meta">建议收录方向</span><h3>验证一个 AI 功能的实现路径与限制</h3><p>问题清单、资料来源、方案取舍、验证输入输出，以及尚未解决的限制。</p><p class="workflow-case-note">记录结构：实际问题 / AI 如何参与 / 人工判断 / 结果与复盘</p></div></details>
+    <aside class="workflow-lesson"><span class="meta">TAKEAWAY 经验要点</span><p>让每一个关键结论对应证据。把“资料中支持”与“当前项目中验证通过”分别记录，避免过早下结论。</p></aside>
     </div>
   </div>
 </section>
 <section id="validation" class="section workflow-chapter" aria-labelledby="validation-title">
-  <div class="section-label meta"><span>05 / REVIEW & VALIDATION</span><span>METHOD NOTES</span></div>
+  <div class="section-label meta"><span>05 REVIEW AND VALIDATION</span><span>METHOD NOTES</span></div>
   <div class="workflow-layout">
-    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">05</span><h2 id="validation-title">AI 验收</h2><p class="workflow-lead">让“看起来完成”，有可核对的依据。</p><p class="workflow-description">把需求转成可检查的标准，结合页面体验与结果证据，形成发现问题、修复和复查的闭环。</p><div class="workflow-output"><span class="meta">DELIVERABLE / 交付物</span><p>验收清单 + 问题证据与复查结果</p></div></div>
+    <div class="workflow-heading"><span class="workflow-number" aria-hidden="true">05</span><h2 id="validation-title">AI 验收</h2><p class="workflow-lead">让看起来完成 有可核对的依据</p><p class="workflow-description">把需求转成可检查的标准，结合页面体验与结果证据，形成发现问题、修复和复查的闭环。</p><div class="workflow-output"><span class="meta">DELIVERABLE 交付物</span><p>验收清单 + 问题证据与复查结果</p></div></div>
     <div class="workflow-content"><div class="workflow-scenario"><h3>解决什么问题</h3><p>页面或功能已经实现，需要确认是否符合需求，以及异常场景下能否正常使用。</p></div>
     <h3 class="workflow-method-title">如何推进</h3><ol class="workflow-steps"><li><span class="meta">01</span><div><h4>写清验收标准</h4><p>从需求和设计稿提炼检查项，为每一项写下预期行为与通过条件。</p></div></li><li><span class="meta">02</span><div><h4>检查真实路径</h4><p>覆盖主要任务、空状态、错误反馈与不同屏幕，记录复现步骤和实际结果。</p></div></li><li><span class="meta">03</span><div><h4>修复后再检查</h4><p>按影响程度处理问题，复查原问题及相关路径，保留仍未通过的项目。</p></div></li></ol>
-    <aside class="workflow-lesson"><span class="meta">TAKEAWAY / 经验要点</span><p>AI 可以辅助找问题，最终结论需要对应可复现的证据。将“通过”“未通过”和“未验证”明确区分。</p></aside>
-    <details class="workflow-case"><summary><span>案例记录 <span class="workflow-status">待补充</span></span><span class="toggle" aria-hidden="true">+</span></summary><div class="workflow-case-body"><span class="meta">建议收录方向</span><h3>对一个完成开发的页面进行体验验收</h3><p>验收标准、问题截图、复现步骤，以及修复前后的结果对照。</p><p class="workflow-case-note">记录结构：实际问题 / AI 如何参与 / 人工判断 / 结果与复盘</p></div></details>
+    <aside class="workflow-lesson"><span class="meta">TAKEAWAY 经验要点</span><p>AI 可以辅助找问题，最终结论需要对应可复现的证据。将“通过”“未通过”和“未验证”明确区分。</p></aside>
     </div>
+  </div>
+</section>
+<section id="contact" class="section reading-contact" aria-labelledby="reading-contact-title">
+  <div class="section-label meta"><span>CONTACT 联系</span><span>LET US MAKE SOMETHING MATTER</span></div>
+  <div class="reading-contact-grid">
+    <div><h2 id="reading-contact-title">联系我 <span aria-hidden="true">↗</span></h2><p>聊聊 AI 产品 设计实践 或下一次合作</p></div>
+    <address><a href="mailto:cescliu8@gmail.com"><span class="meta">EMAIL 邮箱</span><span>cescliu8@gmail.com ↗</span></a><a href="tel:19121320412"><span class="meta">PHONE 手机</span><span>19121320412 ↗</span></a></address>
   </div>
 </section>
 </main>
