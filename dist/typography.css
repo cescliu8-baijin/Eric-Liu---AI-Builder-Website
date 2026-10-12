@@ -1,0 +1,11 @@
+/* Georgia handles Latin characters; Chinese keeps the site's native sans serif. */
+:root{--title-font:Georgia,"PingFang SC","Microsoft YaHei",serif;--masthead-size:clamp(32px,6.2vw,104px)}
+body :is(h1,h2,h3,h4,h5,h6),body :is(h1,h2,h3,h4,h5,h6) [lang="en"],body .live-project-heading h3 span{font-family:var(--title-font)}
+body #hero .builder-title,body .page-intro .page-title,body .page-intro .intro-main .page-title{font-size:var(--masthead-size);line-height:1.12;letter-spacing:-.045em;font-weight:400;overflow-wrap:normal}
+body .builder-en{font-family:Georgia,serif;letter-spacing:inherit}
+#hero .builder-title>span{white-space:normal}
+.subpage .site-header{background:var(--header-background,var(--orange))}
+@media(max-width:760px){
+  #hero .builder-line{gap:10px}
+  #hero .builder-line>span:first-child{min-width:0}
+}

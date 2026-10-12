@@ -232,10 +232,6 @@
   .delivery-flow li{font-size:13px}
 }
 
-/* Keep the three inner-page introductions aligned while allowing text to grow. */
-.subpage .page-intro{min-height:660px}
-@media(max-width:760px){.subpage .page-intro{min-height:700px}}
-
 /* A clear next step at the end of long-form pages. */
 .reading-contact{background:var(--orange);color:var(--ink);padding-bottom:64px}
 .reading-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:48px}
