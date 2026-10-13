@@ -40,3 +40,62 @@
  .overview-gallery .gallery-track{animation:none!important;transform:none!important}
  .is-loop-copy{display:none}
 }
+
+/* Wendy design highlight: modal preview on the left, explanation on the right. */
+.wendy-design-highlight{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.wendy-publisher-image{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+@media(max-width:1000px){.wendy-design-highlight{grid-template-columns:minmax(0,1fr)}}
+
+/* Shared design-system introduction and links. */
+.design-system-showcase{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.65fr);gap:clamp(32px,5vw,80px);padding-top:56px;scroll-margin-top:110px}
+.system-intro>.meta{color:#a93317}
+.system-intro h3{font-size:clamp(26px,2.8vw,40px);font-weight:500;line-height:1.45;letter-spacing:-.035em;margin:22px 0}
+.system-intro>p{font-size:14px;color:#5b5b55;line-height:1.9}
+.system-principles{margin-top:30px}
+.system-principles>div{grid-template-columns:72px 1fr;gap:12px;padding:14px 0}
+.system-principles dt{font-family:inherit;font-weight:500;font-size:13px;line-height:1.8;letter-spacing:0}
+.system-principles dd{font-size:12px;color:#65645e}
+.system-figma-button{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:13px 16px;background:var(--ink);color:var(--paper);font-size:13px;margin-top:28px}
+.system-figma-button svg{width:20px;height:20px;flex:none}.system-figma-button:hover{background:#a93317}
+.system-image-link{display:inline-flex;align-items:center;justify-content:center;gap:16px;flex:none;padding:10px 14px;min-height:44px;border:1px solid var(--line);font-size:12px;border-radius:4px}
+.system-image-link:hover{border-color:var(--ink);background:#e8e5dd}
+@media(max-width:1000px){.design-system-showcase{grid-template-columns:1fr}.system-intro{max-width:680px}}
+@media(max-width:600px){.design-system-showcase{padding-top:36px;gap:32px}.system-figma-button{width:100%}}
+
+/* Compare real Agent homepages with their shared page pattern. */
+.agent-pattern-showcase{padding-top:56px;scroll-margin-top:110px}
+.agent-pattern-layout{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.65fr);gap:clamp(32px,5vw,80px);align-items:center}
+.agent-pattern-layout h3{margin-bottom:0}
+.agent-pattern-summary{max-width:740px;padding-top:24px}.agent-pattern-summary p{font-size:14px;line-height:1.9;color:#5b5b55}.agent-pattern-summary p+p{margin-top:14px}
+.agent-pattern-comparison{display:grid;grid-template-columns:minmax(0,1.1fr) 92px minmax(0,1fr);align-items:center;margin-top:40px}
+.agent-home-sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}
+.agent-home-source{margin:0;min-width:0}.agent-home-source figcaption{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}.agent-home-source strong{font-size:17px;font-weight:500}.agent-home-source figcaption span{font-size:11px;color:#77766e}
+.agent-home-source img{display:block;width:100%;height:auto;border:0;border-radius:0}
+.agent-pattern-connector{position:relative;align-self:stretch;display:flex;align-items:center;padding:0 12px;color:#a93317}.agent-pattern-connector>span{position:absolute;top:50%;left:50%;transform:translate(-50%,-64px);white-space:nowrap;font-size:10px;display:grid;gap:6px;text-align:center;background:var(--paper);padding:4px 3px}.agent-pattern-connector>span b{font:500 19px/1.2 Georgia,serif;letter-spacing:.04em}
+.agent-pattern-connector svg{display:block;width:100%;height:54%;overflow:visible;stroke:currentColor;stroke-width:1.25;vector-effect:non-scaling-stroke}.agent-pattern-connector .pattern-arrow-mobile{display:none}
+.agent-pattern-figure{margin:0;min-width:0}.agent-pattern-figure>img{display:block;width:100%;height:auto;border:0;border-radius:0;background:transparent}
+.agent-pattern-figure figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 14px}.agent-pattern-figure figcaption .meta{color:#a93317}.agent-pattern-figure figcaption strong{font-size:16px;font-weight:500}
+.agent-pattern-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:36px}
+.agent-pattern-principles article{border-top:1px solid var(--line);padding-top:20px}.agent-pattern-principles .meta{color:#a93317}.agent-pattern-principles h4{font-size:18px;font-weight:500;line-height:1.6;margin:14px 0 10px}.agent-pattern-principles p{font-size:14px;color:#5b5b55;line-height:1.9}
+.agent-pattern-showcase+.design-system-showcase{margin-top:48px;border-top:1px solid var(--line)}
+@media(max-width:1000px){.agent-pattern-layout{grid-template-columns:1fr;gap:18px}.agent-pattern-summary{padding-top:0}.agent-pattern-comparison{grid-template-columns:1fr;margin-top:30px}.agent-pattern-connector{height:90px;padding:0;justify-content:center}.agent-pattern-connector .pattern-arrow-desktop{display:none}.agent-pattern-connector .pattern-arrow-mobile{display:block;width:240px;height:80px}.agent-pattern-connector>span{left:calc(50% + 26px);top:24px;transform:none}.agent-pattern-figure{width:100%;max-width:740px;justify-self:center}.agent-pattern-principles{gap:24px}}
+@media(max-width:600px){.agent-pattern-showcase{padding-top:36px}.agent-pattern-layout{gap:18px}.agent-home-sources{gap:22px 14px}.agent-home-source figcaption{flex-direction:column;gap:3px;margin-bottom:8px}.agent-home-source strong{font-size:16px}.agent-pattern-principles{grid-template-columns:1fr;gap:22px;margin-top:28px}.agent-pattern-figure figcaption{align-items:flex-start;flex-direction:column;gap:6px}.agent-pattern-showcase+.design-system-showcase{margin-top:36px}}
+
+/* Static component collage, composed from actual Figma exports. */
+.system-component-figure{margin:0;min-width:0}
+.component-board{position:relative;container-type:inline-size;aspect-ratio:1.04;overflow:hidden;border-radius:10px;background:#292a32;isolation:isolate}
+.component-board-grid{position:absolute;left:50%;top:50%;width:134cqw;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.6cqw;transform:translate(-50%,-50%) rotate(26deg);pointer-events:none;user-select:none}
+.component-board-column{display:flex;flex-direction:column;gap:2.6cqw;min-width:0}
+.component-board-column:nth-child(1){padding-top:12cqw}.component-board-column:nth-child(3){padding-top:6cqw}
+.component-tile{background:#fff;border-radius:1.3cqw;overflow:hidden;padding:2.5cqw;box-shadow:0 1cqw 3cqw #00000010}
+.component-tile>span{display:block;font:500 1.05cqw/1.5 Arial,sans-serif;letter-spacing:.11em;color:#8c8c95;margin-bottom:1.5cqw}
+.component-tile-art{overflow:hidden}.component-tile-art img{display:block;width:100%;height:auto;max-width:none}
+.tile-buttons .component-tile-art{height:37cqw}.tile-buttons img{width:150%;margin-left:-4%;margin-top:-19%}
+.tile-brand{padding:3.5cqw;background:#edecff;color:#6366f1}
+.tile-brand>span{color:#7773ab}.tile-brand strong{display:block;font:600 6.6cqw/1.12 Arial,sans-serif;letter-spacing:-.055em;margin:4cqw 0}
+.tile-brand strong span{display:block;font-size:3.2cqw;font-weight:400;letter-spacing:-.025em;margin-top:1.2cqw}
+.component-palette{display:flex;margin-top:4cqw;border-radius:.6cqw;overflow:hidden;height:4cqw}.component-palette i{flex:1;background:#312e81}.component-palette i:nth-child(2){background:#4f46e5}.component-palette i:nth-child(3){background:#6366f1}.component-palette i:nth-child(4){background:#a5b4fc}.component-palette i:nth-child(5){background:#e0e7ff}
+.tile-dark{background:#161619}.tile-dark>span{color:#aaaab6}
+.system-component-figure figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:16px;color:#65645e;font-size:11px;line-height:1.6}
+@media(max-width:1000px){.component-board{aspect-ratio:1.22}}
+@media(max-width:600px){.component-board{aspect-ratio:.82;border-radius:8px}.component-board-grid{width:160cqw;gap:3cqw;transform:translate(-50%,-50%) rotate(23deg)}.component-board-column{gap:3cqw}.component-tile{padding:3cqw;border-radius:1.7cqw}.component-tile>span{font-size:1.6cqw}.tile-buttons .component-tile-art{height:47cqw}.system-component-figure figcaption{flex-direction:column;gap:5px}}
